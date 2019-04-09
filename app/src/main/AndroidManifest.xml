@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.navbar">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".Base_Units_page"
+            android:label ="Base Units Page"/>
+        <activity android:name=".SI_Units_page"
+            android:label="SI Units"/>
+        <activity android:name=".differentiation"
+            android:label="Differentiation"/>
+        <activity android:name=".MathsNumericIntegration"
+            android:label="Integeration"/>
+        <activity android:name=".uvast_calc"
+            android:label = "UVAST Calculator"/>
+        <activity android:name=".Getting_Area_Volume"
+            android:label="Area and Volume"/>
+        <activity android:name=".light_page"
+            android:label="Light Page"/>
+        <activity android:name=".mechanics_page"
+            android:label ="Mechanics"/>
+        <activity android:name=".elec_page"
+            android:label = "electricity"/>
+        <activity android:name=".lens_calc"
+            android:label ="Lens Calculator"/>
+        <activity android:name=".physics_experiments_homepage"
+            android:label ="Physics Experiments Homepage"/>
+        <activity android:name=".conservation_of_momentum"
+            android:label="Conservation of Momentum"/>
+        <activity android:name=".Length_Area_page"
+            android:label="Lenghth and Area Page"/>
+        <activity android:name=".Physics_page"
+            android:label="Physics"/>
+        <activity android:name=".Trig_page"
+            android:label="Trigonometry"/>
+        <activity android:name=".quadrix"
+            android:label="Solve Quadratic Equation"/>
+        <activity android:name=".Circle"
+            android:label="Circle"/>
+        <activity android:name=".Cone"
+            android:label="cone"/>
+        <activity android:name=".Cube"
+            android:label="Cube"/>
+        <activity android:name=".Cuboid"
+            android:label="Cuboid"/>
+        <activity android:name=".Cylinder"
+            android:label="Cylinder"/>
+        <activity android:name=".Frustum"
+            android:label="Frustum"/>
+        <activity android:name=".Guide_page"
+            android:label="Guide Page"/>
+        <activity android:name=".Hexagon"
+            android:label ="Hexagon"/>
+        <activity android:name=".Octagon"
+            android:label ="Octagon"/>
+        <activity android:name=".Octahedron"
+            android:label ="Octahedron"/>
+        <activity android:name=".OhmLawCalc"
+            android:label ="Ohm's Law Calculator"/>
+        <activity android:name=".Pentagon"
+            android:label = "Pentagon"/>
+        <activity android:name=".Rectangle"
+            android:label = "Rectangle"/>
+        <activity android:name=".Rhombus"
+            android:label = "Rhombus"/>
+        <activity android:name=".Sphere"
+            android:label ="Sphere"/>
+        <activity android:name=".Square"
+            android:label="Square"/>
+        <activity android:name=".Tetrahedron"
+            android:label= "Tetrahedron"/>
+        <activity android:name=".Three_d_page"
+            android:label="3-D Shapes"/>
+        <activity android:name=".Trapezuim"
+            android:label="Trapezium"/>
+        <activity android:name=".Triangle"
+            android:label = "Triangle"/>
+        <activity android:name=".Two_d_page"
+            android:label ="2-D Shapes"/>
+        <activity android:name=".Logs_page"
+            android:label ="Logarithm"/>
+        <activity android:name=".gravity_page"
+            android:label ="Gravity"/>
+        <activity android:name=".Maths_Function"
+            android:label ="Maths Function"/>
+        <activity android:name=".Maths_Setting_Graph"
+            android:label="Setting Graph"/>
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/FORMULAPP"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

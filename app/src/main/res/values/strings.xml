@@ -1,0 +1,136 @@
+<resources>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string name="FORMULAPP">Formulapp</string>
+    <string name="maths">MATHEMATICS</string>
+    <string name="app_name">navBar</string>
+    <string name="content">Content</string>
+    <string name="_1_trigonometry">Trigonometry</string>
+    <string name="_2_fundamental_physical_constants">Fundamental Physical Constants</string>
+    <string name="table_of_contents">Table of Contents</string>
+    <string name="trig_page">Trig page!</string>
+    <string name="phyics_page">Physics Page!</string>
+    <string name="length_area">Length and Area Page! </string>
+    <string name="title_activity_length__area_page">Length_Area_page</string>
+    <string name="title_activity_length__area__page">Length Area Page</string>
+    <string name="compund_angle_formulae">Odd/Even Identities</string>
+    <string name="odd_even_identities">Odd/Even Identities</string>
+    <string name="sin_x_sin_x">sin(-x) = -sin(x)</string>
+    <string name="tan_1_tan_tan_tan_tan">tan(α+β) = 1 − (tan(α)tan(β)/tan(α)+tan(β))</string>
+    <string name="cos_cos_cos_sin_sin">cos(α – β) = cos(α) cos(β) + sin(α) sin(β)</string>
+    <string name="cos_cos_cos_sin_sin1">cos(α + β) = cos(α) cos(β) – sin(α) sin(β)</string>
+    <string name="sin_sin_cos_cos_sin">sin(α – β) = sin(α) cos(β) – cos(α) sin(β)</string>
+    <string name="sin_sin_cos_cos_sin1">sin(α + β) = sin(α) cos(β) + cos(α) sin(β)</string>
+    <string name="angle_sum_and_difference_identities">Angle-Sum and -Difference Identities</string>
+    <string name="tan_x_tan_x">tan(-x) = -tan(x)</string>
+    <string name="cos_x_cos_x">cos(-x) = cos(x)</string>
+    <string name="tan_1_tan_tan_tan_tan1">tan(α−β) = 1 + (tan(α)tan(β)/tan(α)−tan(β)) ​</string>
+    <string name="product_identities">Product Identities</string>
+    <string name="_2_cos_x_cos_y_cos_x_y_cos_x_y">2*cos(x)cos(y) = [cos(x−y) + cos(x+y)]</string>
+    <string name="_2_cos_x_sin_y_sin_x_y_sin_x_y">2*cos(x)sin(y) = [sin(x+y) + sin(x−y)]</string>
+    <string name="_2_sin_x_cos_y_sin_x_y_sin_x_y">2*sin(x)cos(y) = [sin(x+y) + sin(x−y)]</string>
+    <string name="_2_sin_x_sin_y_cos_x_y_cos_x_y">2*sin(x)sin(y) = [cos(x−y) − cos(x+y)]</string>
+    <string name="solve_equation">SOLVE QUADRATIC EQUATION</string>
+    <string name="double_angle_identities">Double Angle Identities</string>
+    <string name="sin_2x_2sin_x_cos_x">sin(2x) = 2sin(x)cos(x)</string>
+    <string name="cos_2x_cos_x_cos_x_sin_x_sin_x">cos(2x) = cos(x)*cos(x) - sin(x)*sin(x)</string>
+    <string name="cos_2x_2_cos_2_x_1">cos(2x) = 2 cos^2(x) - 1</string>
+    <string name="cos_2x_2_cos_x_1">cos(2x) = 2*cos^(x)-1</string>
+    <string name="cos_2x_1_2_sin_2_x">cos(2x) = 1 - 2*sin^2(x)</string>
+    <string name="tan_2x_2tn_x_1_tan_2_x">tan(2x) = [2tn(x)]/[1-tan^2(x)]</string>
+    <string name="sum_to_product_identities">Sum to Product Identities</string>
+    <string name="sin_x_sin_y_2_sin_x_y_2_cos_x_y_2">sin(x) + sin(y) = 2*sin((x+y)/2)*cos((x-y)/2)</string>
+    <string name="sin_x_sin_y_2_cos_x_y_2_sin_x_y_2">sin(x) - sin(y) = 2*cos((x+y)/2)*sin((x-y)/2)</string>
+    <string name="cos_x_cos_y_2_cos_x_y_2_cos_x_y_2">cos(x) + cos(y) = 2*cos((x+y)/2)*cos((x-y)/2)</string>
+    <string name="cos_x_cos_y_2_sin_x_y_2_sin_x_y_2">cos(x) - cos(y) = -2*sin((x+y)/2)*sin((x-y)/2)</string>
+    <string name="periodicity_identities_degrees">Periodicity Identities - degrees</string>
+    <string name="sin_x_360_sin_x">sin(x + 360∘) = sin(x)</string>
+    <string name="sin_x_360_cos_x">sin(x + 360∘) = cos(x)</string>
+    <string name="tan_x_180_tan_x">tan(x + 180∘) = tan(x)</string>
+    <string name="cot_x_180_cot_x">cot(x + 180∘) = cot(x)</string>
+    <string name="mechanics">Mechanics</string>
+    <string name="linear_motion_with_constant_acceleration">Linear Motion With Constant Acceleration</string>
+    <string name="v_u_at">v = u + at</string>
+    <string name="s_ut_1_2at_2">s = ut + 1/2at^2</string>
+    <string name="v_2_u_2_2as">v^2 = u^2 + 2as</string>
+    <string name="s_u_2_v_2_t">s = (u/2+v/2)t</string>
+    <string name="average_speed_distance_time">average speed= distance /time</string>
+    <string name="relative_motion">Relative Motion</string>
+    <string name="sb_sb_sc">Sb = Sb - Sc</string>
+    <string name="vbc_vb_vc">Vbc = Vb - Vc</string>
+    <string name="abc_ab_ac">Abc = Ab - Ac</string>
+    <string name="momentum_of_a_partical">Momentum Of A Partical</string>
+    <string name="mv">mv</string>
+    <string name="newton_s_experimental_law_nel">Newton\'s Experimental Law (NEL)</string>
+    <string name="v1_v2_e_u1_u2">v1 - v2 = -e(u1 - u2)</string>
+    <string name="conservation_of_momentum">Conservation Of Momentum</string>
+    <string name="m1_u1_m2_u2_m1_v1_m2_v2">m1*u1 + m2*u2 = m1*v1 + m2*v2</string>
+    <string name="impulse_change_in_momentum">Impulse (Change In Momentum)</string>
+    <string name="m_v_m_u">m*v - m*u</string>
+    <string name="angle_in_radians">Angle in Radians</string>
+    <string name="s_r">θ = s/r</string>
+    <string name="angular_velocity">Angular Velocity</string>
+    <string name="r">ω = θ / r</string>
+    <string name="linear_velocity_and_angular_velocity">Linear Velocity And Angular Velocity</string>
+    <string name="v_r">v = ω*r</string>
+    <string name="centripetal_acceleration">Centripetal Acceleration</string>
+    <string name="a_2_r">a = ω^2 * r</string>
+    <string name="centripetal_force">Centripetal Force</string>
+    <string name="f_m_r_2_m_v_2_2">F = m*r* ω^2 = (m*v^2) / 2</string>
+    <string name="newton_s_law_of_gravitation">Newton\'s Law Of Gravitation</string>
+    <string name="f_g_m1_m2_d_2">F = (G* m1 * m2)/ d^2</string>
+    <string name="force_and_acceleration">Force and Acceleration</string>
+    <string name="f_m_a">F = m*a</string>
+    <string name="weight_and_acceleration_due_to_gravity">Weight And Acceleration Due to Gravity</string>
+    <string name="w_m_g_v_g_g_gm_r_2">W = m*g = V*ρ*g ; g= GM/R^2</string>
+    <string name="period_of_a_satellite">Period of a Satellite</string>
+    <string name="t_2_4_2_r_3_gm">T^2 = (4π^2 * R^3)/ GM</string>
+    <string name="moment_of_a_force">Moment of a Force</string>
+    <string name="m_fd">M = Fd</string>
+    <string name="torque_of_a_couple">Torque of a Couple</string>
+    <string name="t_fd">T = Fd</string>
+    <string name="centres_of_gravity">Centres Of Gravity</string>
+    <string name="hemisphere_radius_r">Hemisphere, Radius r</string>
+    <string name="_3_8_r_from_centre">3/8 * r from centre</string>
+    <string name="hemispherical_shell_radius_r">Hemispherical Shell, radius r</string>
+    <string name="_1_2_r_from_centre">1/2 * r from centre</string>
+    <string name="right_circular_cone_radius_r">Right Circular Cone, radius r</string>
+    <string name="_1_4_h_from_the_base">1/4 * h from the base</string>
+    <string name="triangular_lamina">Triangular Lamina</string>
+    <string name="_1_3_from_base_along_median">1/3 from base along median =</string>
+    <string name="x1_x2_x3_3_y1_y2_y3_3">{(x1 +x2 + x3)/3 , (y1 +y2 +y3)/3}</string>
+    <string name="arc_radius_r_angle_2">Arc, Radius r, Angle 2θ</string>
+    <string name="r_sin">r * sinθ / θ</string>
+    <string name="sector_of_disc_radius_r_angle_2">sector of disc, radius r, angle 2θ</string>
+    <string name="_2r_sin_3">2r * sinθ / 3θ</string>
+    <string name="surface_area_and_volume">Surface Area and Volume</string>
+    <string name="apparatus_linear_air_track_two_vehicles_with_velcro_pads_attached_blower_two_photogates_two_retort_stands_dual_timer_metre_stick_black_card">Apparatus Linear air-track, two vehicles with velcro pads attached, blower, two photogates, two retort stands, dual timer, metre-stick, black card.</string>
+    <string name="procedure_1_set_up_apparatus_as_in_the_diagram_n_2_connect_air_track_to_blower_n_3_level_the_air_track_n_4_measure_the_mass_of_each_vehicle_m1_and_m2_respectively_including_attachments_using_a_balance_n_5_measure_the_length_l_of_the_black_card_in_metres_n_6_with_vehicle_2_stationary_give_vehicle_1_a_gentle_push_after_collision_the_two_vehicles_coalesce_and_move_off_together_n_7_read_the_transit_times_t1and_t2_for_the_card_through_the_two_beams_n_8_calculate_the_velocity_before_the_collision_u_l_t_1_n_9_calculate_the_velocity_after_the_collision_v_l_t_2_n_10_calculate_the_momentum_before_the_collision_pbefore_m1u_and_the_momentum_after_the_collision_pafter_m1_m2_v_n_11_repeat_several_times_with_different_velocities_and_different_masses_12_record_results_as_shown">Procedure 1. Set up apparatus as in the diagram.  2. Connect air-track to blower.  3. Level the air-track.  4. Measure the mass of each vehicle m1 and m2 respectively, including attachments, using a balance.  5. Measure the length l of the black card in metres.  6. With vehicle 2 stationary, give vehicle 1 a gentle push. After collision the two vehicles coalesce and move off together.  7. Read the transit times t1and t2 for the card through the two beams.  8. Calculate the velocity before the collision, u =l/t_1   9. Calculate the velocity after the collision, v = l/t_2   10. Calculate the momentum before the collision, pbefore = m1u and the momentum after the collision, pafter = (m1 + m2) v.  11. Repeat several times, with different velocities and different masses. 12. Record results as shown.</string>
+    <string name="title_activity_maths__function">Maths_Function</string>
+    <string name="graphing">Graphing</string>
+    <string name="get_area_and_volume">Get Area and Volume</string>
+    <string name="fundamental_physical_constraints">Fundamental Physical Constraints</string>
+    <string name="trigonmetry">Trigonmetry</string>
+    <string name="rootfound">Real and Distinct Roots Found!</string>
+    <string name="integral">&#8747;</string>
+    <string name="ni_hint_f">Enter your function here</string>
+    <string name="ni_hint_upper">upper</string>
+    <string name="ni_hint_lower">lower</string>
+    <string name="ni_button">Calculate integration</string>
+    <string name="ni_button_home">Maths Homepage</string>
+    <string name="maths_ni">Integrate a function</string>
+    <string name="search">Search</string>
+    <string name="two_d_shapes">2-D shapes</string>
+    <string name="physics">Physics</string>
+    <string name="logs_page">Calculate Logarithm</string>
+
+    <string name="title_activity_testcase">testcase</string>
+    <string name="Differentiate">Differentiate</string>
+    <string name="three_d_shapes">3-D shapes</string>
+    <string name="Solve_maths_function">SOLVE FUNCTION</string>
+
+</resources>

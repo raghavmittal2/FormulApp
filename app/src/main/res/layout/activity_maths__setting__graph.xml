@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Maths_Setting_Graph">
+
+    <ScrollView
+        android:layout_width="405dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:scrollbarStyle="outsideInset"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.458">
+
+
+        <RelativeLayout
+            android:id="@+id/relative_setting"
+            android:layout_width="match_parent"
+            android:layout_height="500dp"
+            android:orientation="vertical">
+
+
+
+
+            <TextView
+                android:id="@+id/first_fct"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:ems="20"
+
+
+
+
+                />
+            <TextView
+                android:id="@+id/txt_lower_bound"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/first_fct"
+                android:layout_alignParentRight="@+id/txt_upper_bound"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:ems="20"
+                android:text="Lower bound"
+
+                />
+
+            <TextView
+                android:id="@+id/txt_upper_bound"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/first_fct"
+                android:layout_alignLeft="@+id/txt_lower_bound"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="188dp"
+                android:layout_marginTop="20dp"
+                android:ems="20"
+                android:text="Upper bound " />
+
+
+            <EditText
+                android:id="@+id/lower_bound_x"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/txt_lower_bound"
+                android:layout_alignParentRight="@+id/upper_bound_x"
+                android:layout_marginTop="10dp"
+                android:ems="1"
+                android:hint="Horizontal axis"
+                android:inputType="numberDecimal|numberSigned"
+
+                />
+
+            <EditText
+                android:id="@+id/upper_bound_x"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/txt_upper_bound"
+                android:layout_alignLeft="@+id/lower_bound_x"
+                android:layout_marginLeft="188dp"
+                android:layout_marginTop="10dp"
+                android:ems="1"
+                android:hint="Horizontal axis"
+                android:inputType="numberDecimal|numberSigned" />
+
+
+            <EditText
+                android:id="@+id/lower_bound_y"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/lower_bound_x"
+                android:layout_alignParentRight="@+id/upper_bound_y"
+                android:layout_marginTop="10dp"
+                android:ems="1"
+                android:hint="Vertical axis"
+                android:inputType="numberDecimal|numberSigned"
+
+                />
+
+            <EditText
+                android:id="@+id/upper_bound_y"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/upper_bound_x"
+                android:layout_alignLeft="@+id/lower_bound_y"
+                android:layout_marginLeft="188dp"
+                android:layout_marginTop="10dp"
+                android:ems="1"
+                android:hint="Vertical axis"
+                android:inputType="numberDecimal|numberSigned" />
+
+
+            <Button
+                android:id="@+id/ok_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lower_bound_y"
+                android:layout_marginTop="20dp"
+                android:onClick="goToGraph"
+                android:text="Ok"
+
+                />
+
+
+        </RelativeLayout>
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back"
+    tools:context="fragmentMaths">
+
+    <ScrollView
+        android:layout_width="405dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:scrollbarStyle="outsideInset"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.458">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/Header"
+                android:layout_width="296dp"
+                android:layout_height="55dp"
+                android:layout_marginStart="67dp"
+                android:layout_marginLeft="67dp"
+                android:layout_marginTop="28dp"
+                android:layout_marginEnd="32dp"
+                android:layout_marginRight="32dp"
+                android:text="@string/maths"
+                android:textColor="@color/white"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:typeface="sans"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <Button
+                android:id="@+id/Trig_btn"
+                android:layout_width="296dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="67dp"
+                android:layout_marginLeft="67dp"
+                android:layout_marginTop="64dp"
+                android:background="@drawable/roundedbutton"
+                android:text="@string/_1_trigonometry"
+                android:textSize="18sp"
+                android:typeface="sans"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Header" />
+
+            <Button
+                android:id="@+id/Physics_btn"
+                android:layout_width="296dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="67dp"
+                android:layout_marginLeft="67dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/roundedbutton"
+                android:text="@string/fundamental_physical_constraints"
+                android:textSize="18sp"
+                android:typeface="sans"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Trig_btn" />
+
+            <Button
+                android:id="@+id/LandA_btn"
+                android:layout_width="296dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="67dp"
+                android:layout_marginLeft="67dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/roundedbutton"
+                android:text="@string/surface_area_and_volume"
+                android:textSize="18sp"
+                android:typeface="sans"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Physics_btn" />
+
+            <Button
+                android:id="@+id/quadrix_btn"
+                android:layout_width="296dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="67dp"
+                android:layout_marginLeft="67dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="48dp"
+                android:layout_marginRight="48dp"
+                android:background="@drawable/roundedbutton"
+                android:text="@string/solve_equation"
+                android:textSize="18sp"
+                android:typeface="sans"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/LandA_btn" />
+
+            <Button
+                android:id="@+id/VandA_btn"
+                android:layout_width="296dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="67dp"
+                android:layout_marginLeft="67dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="48dp"
+                android:layout_marginRight="48dp"
+                android:background="@drawable/roundedbutton"
+                android:text="@string/get_area_and_volume"
+                android:textSize="18sp"
+                android:typeface="sans"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/quadrix_btn" />
+
+            <Button
+                android:id="@+id/graph_btn"
+                android:layout_width="296dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="67dp"
+                android:layout_marginLeft="67dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="48dp"
+                android:layout_marginRight="48dp"
+                android:background="@drawable/roundedbutton"
+                android:text="@string/graphing"
+                android:textSize="18sp"
+                android:typeface="sans"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/VandA_btn" />
+
+            <Button
+                android:id="@+id/func_btn"
+                android:layout_width="296dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="67dp"
+                android:layout_marginLeft="67dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/roundedbutton"
+                android:text="@string/Solve_maths_function"
+                android:textSize="18sp"
+                android:typeface="sans"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/graph_btn" />
+
+            <Button
+                android:id="@+id/mathsnumericintegeration"
+                android:layout_width="296dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="67dp"
+                android:layout_marginLeft="67dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="48dp"
+                android:layout_marginRight="48dp"
+                android:background="@drawable/roundedbutton"
+                android:text="@string/maths_ni"
+                android:textSize="18sp"
+                android:typeface="sans"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/func_btn"  />
+
+
+
+            <Button
+                android:id="@+id/differentiate_btn"
+                android:layout_width="296dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="67dp"
+                android:layout_marginLeft="67dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="48dp"
+                android:layout_marginRight="48dp"
+                android:background="@drawable/roundedbutton"
+                android:text="@string/Differentiate"
+                android:textSize="18sp"
+                android:typeface="sans"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/mathsnumericintegeration" />
+
+            <Button
+                android:id="@+id/two_d_shapes_btn"
+                android:layout_width="296dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="67dp"
+                android:layout_marginLeft="67dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="48dp"
+                android:layout_marginRight="48dp"
+                android:background="@drawable/roundedbutton"
+                android:text="@string/two_d_shapes"
+                android:textSize="18sp"
+                android:typeface="sans"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/differentiate_btn" />
+
+            <Button
+                android:id="@+id/three_d_shapes_btn"
+                android:layout_width="296dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="67dp"
+                android:layout_marginLeft="67dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="48dp"
+                android:layout_marginRight="48dp"
+                android:background="@drawable/roundedbutton"
+                android:text="@string/three_d_shapes"
+                android:textSize="18sp"
+                android:typeface="sans"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/two_d_shapes_btn" />
+
+            <Button
+                android:id="@+id/log_btn"
+                android:layout_width="296dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="67dp"
+                android:layout_marginLeft="67dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="48dp"
+                android:layout_marginRight="48dp"
+                android:background="@drawable/roundedbutton"
+                android:text="@string/logs_page"
+                android:textSize="18sp"
+                android:typeface="sans"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/three_d_shapes_btn" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>

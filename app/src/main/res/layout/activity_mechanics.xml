@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Length_Area_page">
+
+    <ScrollView
+        android:layout_width="405dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:scrollbarStyle="outsideInset"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/Header"
+                android:layout_width="327dp"
+                android:layout_height="55dp"
+                android:layout_marginStart="67dp"
+                android:layout_marginLeft="67dp"
+                android:layout_marginTop="28dp"
+                android:layout_marginEnd="32dp"
+                android:layout_marginRight="32dp"
+                android:text="Mechanics Formulae"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:typeface="serif"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Mechanics Formulae" />
+
+
+            <TextView
+                android:id="@+id/textView67"
+                android:layout_width="414dp"
+                android:layout_height="549dp"
+                android:layout_marginTop="111dp"
+                android:layout_marginEnd="38dp"
+                android:layout_marginRight="38dp"
+                android:text="Equations of Motion:\n
+-> v = u + at\n
+-> v^2 = u^2 + 2as\n
+-> s = ut + 1/2 a(t^2)\nConservation of Momentum:\n
+-> m1 u1 + m2 u2 = m1 v1 + m2 v2\nAngle in radians: θ=s/r \n\n
+Angular velocity: ω = θ/t \n\n
+Linear velocity and angular velocity: v = rω\n\n
+Centripetal acceleration: a = rω^2 = (v^2)/r\n\n
+Centripetal force: F = mrω^2= m(v^2)/r\n\n
+Newton’s law of gravitation: F = G(m1m2)/d^2\n\n
+Force and acceleration: F = ma\n\n"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView57" />
+
+
+
+        </LinearLayout>
+    </ScrollView>
+</android.support.constraint.ConstraintLayout>
