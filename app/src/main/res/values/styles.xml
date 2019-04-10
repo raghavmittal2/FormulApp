@@ -16,6 +16,218 @@
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+    <style name="FAheader" >
+        <item name="android:textSize">30sp</item>
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:typeface" >sans</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">36dp</item>
+        <item name="android:layout_marginLeft">36dp</item>
+        <item name="android:layout_marginTop">24dp</item>
+        <item name="android:layout_marginEnd">8dp</item>
+        <item name="android:layout_marginRight">8dp</item>
+        <item name="android:layout_marginBottom">2dp</item>
+        <item name="android:background">@null</item>
+    </style>
+    <style name="FAheaderItalics" >
+        <item name="android:textSize">30sp</item>
+        <item name="android:textColor">@color/colorPrimaryDark</item>
+        <item name="android:typeface" >sans</item>
+        <item name="android:textStyle">italic|bold</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">24dp</item>
+        <item name="android:layout_marginLeft">24dp</item>
+        <item name="android:layout_marginTop">12dp</item>
+        <item name="android:layout_marginBottom">2dp</item>
+        <item name="android:background">@null</item>
+    </style>
+    <style name="FAheader2" >
+        <item name="android:textSize">22sp</item>
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:typeface" >sans</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">40dp</item>
+        <item name="android:layout_marginLeft">40dp</item>
+        <item name="android:layout_marginTop">12dp</item>
+        <item name="android:layout_marginEnd">8dp</item>
+        <item name="android:layout_marginRight">8dp</item>
+        <item name="android:layout_marginBottom">2dp</item>
+        <item name="android:background">@null</item>
+    </style>
+    <style name="FAbody" >
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:textColorHint">@color/colorWhite</item>
+        <item name="android:typeface" >sans</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">44dp</item>
+        <item name="android:layout_marginLeft">44dp</item>
+        <item name="android:layout_marginTop">4dp</item>
+        <item name="android:layout_marginEnd">8dp</item>
+        <item name="android:layout_marginRight">8dp</item>
+        <item name="android:layout_marginBottom">2dp</item>
+        <item name="android:background">@null</item>
+    </style>
+    <style name="FAbutton" >
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:textColorHint">@color/colorWhite</item>
+        <item name="android:typeface" >sans</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">56dp</item>
+        <item name="android:layout_marginStart">40dp</item>
+        <item name="android:layout_marginLeft">40dp</item>
+        <item name="android:layout_marginTop">4dp</item>
+        <item name="android:layout_marginEnd">8dp</item>
+        <item name="android:layout_marginRight">8dp</item>
+        <item name="android:layout_marginBottom">2dp</item>
+        <item name="android:background">@drawable/divider</item>
+    </style>
+
+    <style name="FAtile" >
+        <item name="android:layout_weight">1</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:gravity">left|top</item>
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:paddingRight">10dp</item>
+        <item name="android:paddingBottom">12dp</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:textColorHint">@color/colorWhite</item>
+        <item name="android:typeface" >sans</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">128dp</item>
+        <item name="android:layout_marginStart">2dp</item>
+        <item name="android:layout_marginLeft">2dp</item>
+        <item name="android:layout_marginTop">2dp</item>
+        <item name="android:layout_marginEnd">2dp</item>
+        <item name="android:layout_marginRight">2dp</item>
+        <item name="android:layout_marginBottom">0dp</item>
+        <item name="android:background">@drawable/cyan</item>
+    </style>
+
+    <style name="FAtitleBar" >
+        <item name="android:layout_weight">2</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:gravity">left|center_vertical</item>
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:textColorHint">@color/colorWhite</item>
+        <item name="android:typeface" >sans</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">36dp</item>
+        <item name="android:layout_marginStart">2dp</item>
+        <item name="android:layout_marginLeft">2dp</item>
+        <item name="android:layout_marginTop">2dp</item>
+        <item name="android:layout_marginEnd">2dp</item>
+        <item name="android:layout_marginRight">2dp</item>
+        <item name="android:layout_marginBottom">0dp</item>
+        <item name="android:background">@drawable/softbluebar</item>
+    </style>
+
+    <style name="FAtextBox" >
+        <item name="android:layout_weight">2</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:gravity">top|left</item>
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:paddingRight">10dp</item>
+        <item name="android:paddingBottom">12dp</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/colorPrimaryDark</item>
+        <item name="android:textColorHint">@color/colorGrey</item>
+        <item name="android:typeface" >sans</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">2dp</item>
+        <item name="android:layout_marginLeft">2dp</item>
+        <item name="android:layout_marginTop">0dp</item>
+        <item name="android:layout_marginEnd">2dp</item>
+        <item name="android:layout_marginRight">2dp</item>
+        <item name="android:layout_marginBottom">0dp</item>
+        <item name="android:background">@drawable/textbox</item>
+    </style>
+
+    <style name="FAfooter">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">2dp</item>
+        <item name="android:layout_marginLeft">2dp</item>
+        <item name="android:layout_marginTop">0dp</item>
+        <item name="android:layout_marginEnd">2dp</item>
+        <item name="android:layout_marginRight">2dp</item>
+        <item name="android:layout_marginBottom">2dp</item>
+        <item name="android:adjustViewBounds">true</item>
+        <item name="android:scaleType">fitXY</item>
+        <item name="android:src">@drawable/textboxfooter</item>
+    </style>
+
+    <style name="FAscroll">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">4dp</item>
+        <item name="android:layout_marginLeft">4dp</item>
+        <item name="android:layout_marginRight">4dp</item>
+        <item name="android:scrollbarStyle">outsideInset</item>
+    </style>
+
+    <style name="FAlinearlayout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">2dp</item>
+        <item name="android:layout_marginEnd">2dp</item>
+        <item name="android:layout_marginTop">2dp</item>
+        <item name="android:layout_marginLeft">2dp</item>
+        <item name="android:layout_marginRight">2dp</item>
+        <item name="android:background">@drawable/textbox</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="FAtilebutton" >
+        <item name="android:layout_weight">1</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:gravity">left|top</item>
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:paddingRight">10dp</item>
+        <item name="android:paddingBottom">12dp</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:textColorHint">@color/colorWhite</item>
+        <item name="android:typeface" >sans</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">44dp</item>
+        <item name="android:layout_marginStart">2dp</item>
+        <item name="android:layout_marginLeft">2dp</item>
+        <item name="android:layout_marginTop">2dp</item>
+        <item name="android:layout_marginEnd">2dp</item>
+        <item name="android:layout_marginRight">2dp</item>
+        <item name="android:layout_marginBottom">0dp</item>
+        <item name="android:background">@drawable/cyan</item>
+    </style>
+
+    <style name="solveButton">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">20dp</item>
+        <item name="android:typeface">serif</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:background">@drawable/roundedbutton</item>
+        <item name="android:padding">20dp</item>
+    </style>
 
 </resources>
 
