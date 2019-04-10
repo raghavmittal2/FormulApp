@@ -14,7 +14,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:ems="10"
-        android:hint="Enter your function!"
+        android:hint="Enter yous function!"
         android:textColorHint="@color/darkgrey"
         android:textColor="@color/white"
         app:layout_constraintTop_toTopOf="parent" />
