@@ -17,12 +17,10 @@ public class fragmentMaths extends Fragment {
     private Button LandA_btn;
     private Button VandA_btn;
     private Button graph_btn;
-    private Button differentiate_btn;
     private Button mathsnumericintegeration;
     private Button two_d_btn;
     private Button three_d_btn;
     private Button logs_btn;
-    private Button maths_func_btn;
 
     @Nullable
     @Override
@@ -46,8 +44,6 @@ public class fragmentMaths extends Fragment {
         VandA_btn.getBackground().setAlpha(64);
         graph_btn = (Button) view.findViewById(R.id.graph_btn);
         graph_btn.getBackground().setAlpha(64);
-        differentiate_btn = (Button) view.findViewById(R.id.differentiate_btn);
-        differentiate_btn.getBackground().setAlpha(64);
         mathsnumericintegeration = (Button) view.findViewById(R.id.mathsnumericintegeration);
         mathsnumericintegeration.getBackground().setAlpha(64);
         two_d_btn = (Button) view.findViewById(R.id.two_d_shapes_btn);
@@ -101,12 +97,6 @@ public class fragmentMaths extends Fragment {
         });
 
 
-        differentiate_btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v){
-                openDifferentiatePage(v);         //function for opening page
-            }
-        });
 
         mathsnumericintegeration.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -168,12 +158,6 @@ public class fragmentMaths extends Fragment {
         startActivity(intent);
     }
 
-
-
-    public void openDifferentiatePage(View v) {
-        Intent intent = new Intent(getActivity(), differentiation.class);
-        startActivity(intent);
-    }
 
     public void openMathsNumericIntegeration(View v) {
         Intent intent = new Intent(getActivity(), MathsNumericIntegration.class);

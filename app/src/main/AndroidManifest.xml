@@ -18,9 +18,6 @@
             android:name=".SI_Units_page"
             android:label="SI Units" />
         <activity
-            android:name=".differentiation"
-            android:label="Differentiation" />
-        <activity
             android:name=".MathsNumericIntegration"
             android:label="Integeration" />
         <activity

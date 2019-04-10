@@ -172,27 +172,9 @@
                 android:textColor="@color/white"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/func_btn"  />
+                app:layout_constraintTop_toBottomOf="@+id/graph_btn"  />
 
 
-
-            <Button
-                android:id="@+id/differentiate_btn"
-                android:layout_width="296dp"
-                android:layout_height="60dp"
-                android:layout_marginStart="67dp"
-                android:layout_marginLeft="67dp"
-                android:layout_marginTop="20dp"
-                android:layout_marginEnd="48dp"
-                android:layout_marginRight="48dp"
-                android:background="@drawable/roundedbutton"
-                android:text="@string/Differentiate"
-                android:textSize="18sp"
-                android:typeface="sans"
-                android:textColor="@color/white"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/mathsnumericintegeration" />
 
             <Button
                 android:id="@+id/two_d_shapes_btn"
@@ -210,7 +192,7 @@
                 android:textColor="@color/white"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/differentiate_btn" />
+                app:layout_constraintTop_toBottomOf="@+id/mathsnumericintegeration" />
 
             <Button
                 android:id="@+id/three_d_shapes_btn"
