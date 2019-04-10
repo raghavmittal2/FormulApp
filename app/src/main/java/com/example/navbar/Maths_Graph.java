@@ -229,7 +229,7 @@ public class Maths_Graph extends AppCompatActivity {
                 break;
 
             case "Green":
-                numColor= getResources().getColor(R.color.colorPrimary);
+                numColor= getResources().getColor(R.color.colorGreen);
                 break;
 
             case "Random":
