@@ -63,10 +63,10 @@ public class MathsNumericIntegration extends AppCompatActivity {
             }
             return;
         }
-        ni_f.setError("");
-        lowerV.setError("");
-        upperV.setError("");
-        variableT.setError("");
+        ni_f.setError(null);
+        lowerV.setError(null);
+        upperV.setError(null);
+        variableT.setError(null);
         final String variable = variableT.getText().toString();
         final String fct = ni_f.getText().toString();
         TextView errorView = findViewById(R.id.ni_error);
