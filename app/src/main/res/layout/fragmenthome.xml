@@ -20,12 +20,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="152dp"
-            android:background="@drawable/roundedbutton"
+            android:background="@drawable/search_background"
             android:gravity="center"
             android:iconifiedByDefault="false"
             android:queryHint="learn something new"
             app:layout_constraintTop_toTopOf="parent"
-            tools:layout_editor_absoluteX="0dp"></SearchView>
+            tools:layout_editor_absoluteX="0dp"/>
 
         <ListView
             android:id="@+id/list_view"
@@ -33,7 +33,7 @@
             android:layout_height="349dp"
             app:layout_constraintTop_toBottomOf="@+id/search_view"
             tools:layout_editor_absoluteX="0dp"
-            android:background="@drawable/roundedbutton"></ListView>
+            android:background="@drawable/search_background"/>
     </android.support.constraint.ConstraintLayout>
 
 </android.support.constraint.ConstraintLayout>
