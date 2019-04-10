@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -31,6 +32,24 @@ public class MathsNumericIntegration extends AppCompatActivity {
         myParser.addStandardFunctions();
         myParser.addStandardConstants();
         EditText ni_f = findViewById(R.id.ni_f);
+        EditText lowerV = findViewById(R.id.ni_lower);
+        EditText upperV = findViewById(R.id.ni_upper);
+        boolean emptyF,emptyUpper,emptyLower;
+        emptyF = TextUtils.isEmpty(ni_f.getText().toString());
+        emptyUpper = TextUtils.isEmpty(upperV.getText().toString());
+        emptyLower = TextUtils.isEmpty(lowerV.getText().toString());
+        if ( emptyF || emptyUpper || emptyLower){
+            if (emptyF){
+                ni_f.setError("You need to enter a function");
+            }
+            if ( emptyLower){
+                lowerV.setError("You need to enter a lower range value");
+            }
+            if (emptyUpper){
+                upperV.setError("You need to enter an upper range value");
+            }
+            return;
+        }
         final String fct = ni_f.getText().toString();
         //parse function for fast evaluation
         //TODO get variable name from edit text and not a dummy
@@ -54,8 +73,7 @@ public class MathsNumericIntegration extends AppCompatActivity {
         int attempts = 0;
         // tag
         boolean converged = false;
-        EditText lowerV = findViewById(R.id.ni_lower);
-        EditText upperV = findViewById(R.id.ni_upper);
+
         double upper = Double.valueOf(upperV.getText().toString());
         double lower = Double.valueOf(lowerV.getText().toString());
         while (!converged) {
