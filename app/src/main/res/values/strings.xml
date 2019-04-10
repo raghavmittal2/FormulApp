@@ -133,4 +133,12 @@
     <string name="three_d_shapes">3-D shapes</string>
     <string name="Solve_maths_function">SOLVE FUNCTION</string>
 
+    <string-array name="colors">
+        <item>Blue</item>
+        <item>Dark</item>
+        <item>Red</item>
+        <item>Green</item>
+        <item>Random</item>
+    </string-array>
+
 </resources>

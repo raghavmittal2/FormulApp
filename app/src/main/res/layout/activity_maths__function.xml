@@ -2,27 +2,17 @@
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-
+    android:background="@color/colorPrimaryDark"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Maths_Setting_Graph"
-    android:background="@color/colorPrimaryDark">
+    tools:context=".Maths_Function">
 
     <ScrollView
         android:layout_width="405dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="8dp"
         android:scrollbarStyle="outsideInset"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.458">
+        tools:layout_editor_absoluteX="3dp"
+        tools:layout_editor_absoluteY="151dp">
 
 
         <RelativeLayout
@@ -31,54 +21,91 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <EditText
-                android:id="@+id/variable"
+            <TextView
+                android:id="@+id/txt_variable"
+                android:textColor="@color/white"
+                android:textColorHint="@color/darkgrey"
+                android:textStyle="bold"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                android:hint="Variable you want to use (Eg:x)"
-                android:textColorHint="@color/darkgrey"
-                android:textColor="@color/white"
-                android:ems="10"
+                android:textSize="20dp"
+                android:text="Variable"
                 />
+
+
+
+            <EditText
+                android:id="@+id/variable"
+                android:textColor="@color/white"
+                android:textColorHint="@color/darkgrey"
+                android:layout_below="@+id/txt_variable"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:ems="10"
+                android:hint="Variable you want to use (Eg:x)"
+                android:maxLength="1" />
+
+
+            <TextView
+                android:id="@+id/txt_fct"
+                android:textColor="@color/white"
+                android:textColorHint="@color/darkgrey"
+                android:textStyle="bold"
+                android:layout_below="@+id/variable"
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Functions"
+
+                android:textSize="20dp"
+                />
+
+            <ImageButton
+                android:id="@+id/imageButton"
+                android:textColor="@color/white"
+                android:textColorHint="@color/darkgrey"
+                android:layout_width="70dp"
+                android:background="@color/colorWhite"
+                android:layout_height="59dp"
+                android:layout_below="@+id/variable"
+                android:layout_marginLeft="0dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginEnd="0dp"
+                android:layout_marginRight="200dp"
+                android:layout_toRightOf="@+id/txt_fct"
+                android:adjustViewBounds="true"
+                android:scaleType="centerInside"
+                android:onClick="displayTips"
+                app:srcCompat="@drawable/tips" />
 
 
             <EditText
                 android:id="@+id/init_fct"
-                android:layout_below="@+id/variable"
+                android:textColor="@color/white"
+                android:textColorHint="@color/darkgrey"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_below="@+id/txt_fct"
                 android:layout_marginTop="20dp"
                 android:ems="10"
+                android:onClick="displayCheckView"
                 android:hint="Enter your function"
-                android:textColorHint="@color/darkgrey"
-                android:textColor="@color/white"
 
                 />
 
 
-            <Button
-                android:id="@+id/submit_fct"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/init_fct"
-                android:layout_marginTop="20dp"
-                android:text="Submit"
-                android:background="@drawable/roundedbutton"
-                android:textColor="@color/white"
-
-                />
 
 
             <io.github.kexanie.library.MathView
                 android:id="@+id/formula"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_below="@+id/init_fct"
                 android:layout_marginTop="20dp"
-                android:layout_below="@+id/submit_fct"
                 android:text=""
-                android:textColor="@color/white"
-                android:typeface="sans"
+
                 ></io.github.kexanie.library.MathView>
 
 
@@ -87,10 +114,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/formula"
-                android:layout_marginTop="20dp"
-                android:text="New function"
                 android:background="@drawable/roundedbutton"
                 android:textColor="@color/white"
+                android:layout_marginTop="20dp"
+                android:text="Add a new function"
+
 
                 />
 
@@ -101,14 +129,19 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/new_fct"
                 android:layout_marginTop="20dp"
+                android:background="@drawable/roundedbutton"
+                android:textColor="@color/white"
                 android:onClick="goToGraphSetting"
                 android:text="See Graph"
-                android:textColor="@color/white"
-                android:background="@drawable/roundedbutton"
+
                 />
+
+
 
 
         </RelativeLayout>
     </ScrollView>
+
+
 
 </android.support.constraint.ConstraintLayout>

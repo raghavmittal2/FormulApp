@@ -171,7 +171,7 @@ public class fragmentMaths extends Fragment {
     }
 
     public void openGraphPage(View v) {
-        Intent intent = new Intent(getActivity(), Maths_Setting_Graph.class);
+        Intent intent = new Intent(getActivity(), Maths_Function.class);
         startActivity(intent);
     }
 

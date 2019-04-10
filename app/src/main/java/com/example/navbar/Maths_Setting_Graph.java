@@ -1,38 +1,48 @@
 package com.example.navbar;
 
-import android.app.ActionBar.LayoutParams;
+import android.app.ActionBar;
 import android.content.Intent;
-import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
 import android.view.View;
-import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RelativeLayout;
+import android.widget.*;
 
-import io.github.kexanie.library.MathView;
+import java.util.*;
+
+import android.widget.AdapterView.OnItemSelectedListener;
 
 
 public class Maths_Setting_Graph extends AppCompatActivity {
 
 
-    private String fct;
-    private String[] fctList;
-    private MathView formula;
-    private RelativeLayout mLayout;
-    private Button submitButton;
-    private Button newFctButton;
-    private EditText currentEdit;
-    private EditText variable;
-    private EditText fct_init;
-    private EditText parentEdit;
-    private int nbNewFct;
-    private String var;
-    private boolean correctFct;
+    private Button okButton;
+    private TextView fctTextInit;
+    private TextView parentText;
+    private TextView upperText;
+    private TextView lowerText;
+    private TextView boundariesText;
+    private EditText lowerEditx;
+    private EditText upperEditx;
+    private EditText lowerEdity;
+    private EditText upperEdity;
+    private String upperx;
+    private String lowerx;
+    private String uppery;
+    private String lowery;
+    private HashMap<Integer, String> colorFctList;
 
-   /* String tex = "This come from string. You can insert inline formula:" +
-            " $$cos^2$$ " + "test" +
-            "or displayed formula: $$\\sum_{i=0}^n i^2 = \\frac{(n^2+n)(2n+1)}{6}$$";*/
+    private TextView first_fct;
+    private String[] fctList;
+    private String var;
+    private RelativeLayout mLayout;
+    private int previous = 0;
+    private Double dlowerx;
+    private Double dupperx;
+    private Double dlowery;
+    private Double duppery;
+    private String clickedColor;
 
 
     @Override
@@ -41,102 +51,159 @@ public class Maths_Setting_Graph extends AppCompatActivity {
         setContentView(R.layout.activity_maths__setting__graph);
 
         //initialisation
-        submitButton = (Button) findViewById(R.id.submit_fct);
-        newFctButton = (Button) findViewById(R.id.new_fct);
-        mLayout = (RelativeLayout) findViewById(R.id.relative);
-        fct_init = (EditText) findViewById(R.id.init_fct);
-        formula = (MathView) findViewById(R.id.formula);
-        variable = (EditText) findViewById(R.id.variable);
-        nbNewFct = 0;
-        fctList = new String[100];
-        currentEdit = fct_init;
-
-        //Action when we click on the submit button : display the Math View of the fct
-        submitButton.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-
-                formula.setText("$$" + currentEdit.getText().toString() + "$$");
-                fct = currentEdit.getText().toString();
+        okButton = (Button) findViewById(R.id.ok_btn);
+        mLayout = (RelativeLayout) findViewById(R.id.relative_setting);
+        lowerEditx = (EditText) findViewById(R.id.lower_bound_x);
+        upperEditx = (EditText) findViewById(R.id.upper_bound_x);
+        lowerEdity = (EditText) findViewById(R.id.lower_bound_y);
+        upperEdity = (EditText) findViewById(R.id.upper_bound_y);
+        upperText = (TextView) findViewById(R.id.txt_upper_bound);
+        lowerText = (TextView) findViewById(R.id.txt_lower_bound);
+        first_fct = (TextView) findViewById(R.id.first_fct);
+        colorFctList = new HashMap<Integer, String>();
+        boundariesText=(TextView) findViewById(R.id.txt_boundaries);
 
 
-            }
-        });
+        //We gather the information of the previous activity
+        Intent intent = getIntent();
+        fctList = intent.getStringArrayExtra("fct");
+        var = intent.getStringExtra("variable");
+        first_fct.setText("Function 1: " + fctList[0]);
+        for (int i = 0; i < fctList.length; i++) {
+            if (fctList[i] != null) {
+                if (i != 0) {// The textView already created for the first function which is mandatory
+                    mLayout.addView(createNewTextView(i, fctList[i]));
+                }
 
-        //Action when we click ont the button new function : add a new EditText
-        newFctButton.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-                nbNewFct++;
-                mLayout.addView(createNewEditText(nbNewFct));
-                String nameCurrent = "" + nbNewFct;
-                //We change the current EditText
-                currentEdit = (EditText) findViewById(getResources().getIdentifier(nameCurrent, "id", getPackageName()));
+                mLayout.addView(createNewSpinner(i)); // we create a new spinner for each editText, for the choice of the color
 
 
             }
-        });
+        }
     }
 
-    //Method to create a new EditText
-    protected EditText createNewEditText(int i) {
-        final EditText editText = new EditText(this);
 
-        //we define an id for each new Edit Text
-        editText.setId(i);
-        editText.setHint("Enter your function");
+    //Method to create a new TextView
+    protected TextView createNewTextView(int i, String currentFct) {
 
-        //We need to move the submit fct according to the creation of new editText
-        RelativeLayout.LayoutParams mLayout2 = (RelativeLayout.LayoutParams) submitButton.getLayoutParams();
-        mLayout2.addRule(RelativeLayout.BELOW, editText.getId());
+        final TextView textView = new TextView(this);
+
+        //we define an id for each new TextView
+        textView.setId(i);
 
 
-        //We create a new relative layout to be able to display the new edit text below the others
-        RelativeLayout.LayoutParams p = new RelativeLayout.LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT);
-        if (i == 1 || i == 0) {
-            p.addRule(RelativeLayout.BELOW, R.id.init_fct);
+        //We need to move the upper and lower boundaries display according to the creation of new textView
+        RelativeLayout.LayoutParams mLayout2 = (RelativeLayout.LayoutParams) boundariesText.getLayoutParams();
+        mLayout2.addRule(RelativeLayout.BELOW, textView.getId());
 
+
+
+        //We create a new relative layout to be able to display the new text view above the others
+        RelativeLayout.LayoutParams p = new RelativeLayout.LayoutParams(ActionBar.LayoutParams.WRAP_CONTENT, ActionBar.LayoutParams.WRAP_CONTENT);
+
+        if (i == 1) {
+
+            p.addRule(RelativeLayout.BELOW, first_fct.getId());
 
         } else {
-            int previous = i--;
-            String name = "" + i;
-            parentEdit = (EditText) findViewById(getResources().getIdentifier(name, "id", getPackageName()));
-            p.addRule(RelativeLayout.BELOW, parentEdit.getId());
+            p.addRule(RelativeLayout.BELOW, parentText.getId());
+
+
+        }
+        int numFct = i + 1;
+
+        textView.setText("Function " + numFct + ": " + currentFct);
+        parentText = textView;
+        textView.setLayoutParams(p);
+        return textView;
+
+
+    }
+
+
+    //Method to create a new spinner
+    protected Spinner createNewSpinner(int id) {
+
+        final int numId = id;
+        Spinner spin = new Spinner(this);
+
+        ArrayAdapter<CharSequence> dataAdapter = ArrayAdapter.createFromResource(this, R.array.colors, android.R.layout.simple_spinner_item);
+        RelativeLayout.LayoutParams pbis = new RelativeLayout.LayoutParams(ActionBar.LayoutParams.WRAP_CONTENT, ActionBar.LayoutParams.WRAP_CONTENT);
+
+
+        //Dropdown layoutstyle
+        dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+
+        //attaching  data adapter to spinner
+        spin.setAdapter(dataAdapter);
+        spin.setOnItemSelectedListener(new OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                clickedColor = parent.getItemAtPosition(position).toString();
+                Toast.makeText(parent.getContext(), clickedColor, Toast.LENGTH_SHORT).show();
+                colorFctList.put(numId, clickedColor);
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+                // TODO Auto-generated method stub
+            }
+        });
+
+        //we define constraint for the layout
+        if (id == 0) {
+
+
+            pbis.addRule(RelativeLayout.ALIGN_BASELINE, first_fct.getId());
+            pbis.addRule(RelativeLayout.ALIGN_PARENT_RIGHT, first_fct.getId());
+            previous = id;
+
+
         }
 
-        editText.setLayoutParams(p);
+        if (id == 1) {
+            pbis.addRule(RelativeLayout.BELOW, first_fct.getId());
+            previous = id;
+            pbis.addRule(RelativeLayout.ALIGN_BASELINE, id);
+            pbis.addRule(RelativeLayout.ALIGN_PARENT_RIGHT, id);
 
-        return editText;
+        } else {
+            if (id != 0) {
+                pbis.addRule(RelativeLayout.BELOW, previous);
+                pbis.addRule(RelativeLayout.ALIGN_PARENT_RIGHT, previous);
+                previous = id;
+            }
 
+
+        }
+
+
+        spin.setLayoutParams(pbis);
+
+        return spin;
 
     }
 
 
     //Action to go to the Graph view
-    protected void goToGraphSetting(View view) {
-        EditText et;
+    protected void goToGraph(View view) {
+        upperx = upperEditx.getText().toString();
+        lowerx = lowerEditx.getText().toString();
+        uppery = upperEdity.getText().toString();
+        lowery = lowerEdity.getText().toString();
 
-        ViewGroup editTextsContainer = (ViewGroup) findViewById(R.id.relative);
-        int sum = 0;
-        int i = editTextsContainer.getChildCount();
-        int countTab = 0;
-
-        for (int j = 0; j < i; j++) { // Parcours des fils
-            View child = editTextsContainer.getChildAt(j); // We gather all the child of the view
-            if (child instanceof EditText && child.getId() != variable.getId()) { // if its an editText, we collect his contents and add it into the array and not if its not the choice of the variable
-                   fctList[countTab] = ((EditText) child).getText().toString();
-                   countTab++;
-
-            }
-        }
-
-        var = variable.getText().toString();
-        Intent intent = new Intent(this, Maths_Setting_Graph.class);
+        Intent intent = new Intent(this, Maths_Graph.class);
         intent.putExtra("fct", fctList);
         intent.putExtra("variable", var);
+        intent.putExtra("lowerx", lowerx);
+        intent.putExtra("upperx", upperx);
+        intent.putExtra("lowery", lowery);
+        intent.putExtra("uppery", uppery);
+        intent.putExtra("color", clickedColor);
+        intent.putExtra("hashmap", colorFctList);
+
         if (checkSetting(view, intent)) {
+
             startActivity(intent);
         }
     }
@@ -144,58 +211,43 @@ public class Maths_Setting_Graph extends AppCompatActivity {
 
     //Check if all the information required are presents
     protected boolean checkSetting(final View view, Intent intent) {
-        //At least the first EditText must be completed with a function and the variable EditTExt
+        //The user must provide the upper and the lower bound
 
-        if (variable.getText().toString().equals("")) {
-            variable.setError("Required!");
-            return false;
-        }
-        if (fct_init.getText().toString().equals("")) {
-            fct_init.setError("Required!");
+        if (lowerEditx.getText().toString().equals("")) {
+            lowerEditx.setError("Required!");
             return false;
 
         }
 
+        if (upperEditx.getText().toString().equals("")) {
+            upperEditx.setError("Required!");
+            return false;
 
-        return true; // All the function must be true, if that ok it will return true
+        }
+        //We need to check that upperboundarie is bigger than lowerboundarie otherwise its not going to work
+        dlowerx = Double.valueOf(lowerx);
+        dupperx = Double.valueOf(upperx);
+        dlowery = Double.valueOf(lowery);
+        duppery = Double.valueOf(uppery);
+
+        if (!upperValid(dlowerx, dupperx)) {
+            upperEditx.setError("Upper limit needs to be bigger than the lower limit");
+            return false;
+        }
+
+        if (!upperValid(dlowery, duppery)) {
+            upperEdity.setError("Upper limit needs to be bigger than the lower limit");
+            return false;
+        }
+
+        return true;
+    }
+
+    //Check that upperbound bigger than lower boundarie
+    public boolean upperValid(double lower, double upper) {
+
+        return (lower < upper);
     }
 
 
-    //Check if the user uses well the variable he defines and not another one
-   /* protected boolean checkFunction(String fct){
-
-        String regex = "([a-zA-z])*[^" +var+ "]";
-
-
-        if (fct.matches(regex)) { // find another variable that the one defined by the user
-
-
-            //If not we display an Alert box to explain what's wrong
-            AlertDialog.Builder builder = new AlertDialog.Builder(this);
-            builder.setCancelable(true);
-            builder.setTitle("You need to the variable you defined");
-            builder.setPositiveButton("ok", new DialogInterface.OnClickListener() {
-                @Override
-                public void onClick(DialogInterface dialog, int which) {
-                    //After the close of the dialog box we open the page to choose the profil picture
-
-
-                }
-            });
-
-            builder.show();
-
-            return false;
-
-
-        }
-        return true;
-
-    }*/
-
-
 }
-
-
-
-

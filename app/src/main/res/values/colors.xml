@@ -6,4 +6,11 @@
     <color name="colorAccent">#D81B60</color>
     <color name="red">#FF0000</color>
     <color name="darkgrey">#6c6c6c</color>
+    <color name="colorGreen">#87D817</color>
+    <color name="colorGreenShade">#78CA10</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorGrey">#7a7d82</color>
+    <color name="colorRed">#E01414</color>
+    <color name="blue">#3388FF</color>
+
 </resources>

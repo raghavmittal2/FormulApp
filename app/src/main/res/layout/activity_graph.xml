@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    tools:context=".Maths_Graph">
+
+    <com.jjoe64.graphview.GraphView
+        android:layout_width="match_parent"
+        android:layout_height="450dp"
+        android:id="@+id/graph">
+    </com.jjoe64.graphview.GraphView>
+
+    <Button
+        android:id="@+id/test"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="takeSnap"
+        android:layout_marginTop="10dp"
+        android:text="Share the graph"
+        android:layout_below="@+id/graph"
+        android:background="@drawable/roundedbutton"
+        android:textColor="@color/white"
+
+        />
+    />
+
+
+</RelativeLayout>

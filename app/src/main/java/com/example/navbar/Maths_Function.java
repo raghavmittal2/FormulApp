@@ -1,15 +1,19 @@
 package com.example.navbar;
 
 
-import android.app.ActionBar.LayoutParams;
+
+
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
-import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.RelativeLayout;
+import android.os.Bundle;
+import android.view.*;
+import android.widget.*;
+import android.app.ActionBar.*;
+
+
+import java.util.regex.*;
 
 import io.github.kexanie.library.MathView;
 
@@ -23,6 +27,7 @@ public class Maths_Function extends AppCompatActivity {
     private RelativeLayout mLayout;
     private Button submitButton;
     private Button newFctButton;
+    private ImageButton imageBtn;
     private EditText currentEdit;
     private EditText variable;
     private EditText fct_init;
@@ -31,27 +36,20 @@ public class Maths_Function extends AppCompatActivity {
     private String var;
     private boolean correctFct;
 
-   /* String tex = "This come from string. You can insert inline formula:" +
-            " $$cos^2$$ " + "test" +
-            "or displayed formula: $$\\sum_{i=0}^n i^2 = \\frac{(n^2+n)(2n+1)}{6}$$";*/
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_maths__function);
 
         //initialisation
-        submitButton = (Button) findViewById(R.id.submit_fct);
         newFctButton = (Button) findViewById(R.id.new_fct);
         mLayout = (RelativeLayout) findViewById(R.id.relative);
         fct_init = (EditText) findViewById(R.id.init_fct);
         formula = (MathView) findViewById(R.id.formula);
         variable = (EditText) findViewById(R.id.variable);
         nbNewFct = 0;
-        fctList = new String[100];
-        currentEdit = fct_init;
 
+        currentEdit = fct_init;
 
 
 
@@ -72,8 +70,26 @@ public class Maths_Function extends AppCompatActivity {
     }
 
 
+    protected void displayTips(View view){
+        AlertDialog.Builder builder = new AlertDialog.Builder(Maths_Function.this);
+        builder.setCancelable(true);
+        builder.setTitle("Tips");
+        builder.setMessage("Double click on your function to display it and to check if this is the function you want to display");
+        builder.setPositiveButton("ok", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                //After the display of the message, we close the alert box
+
+
+            }
+        });
+        builder.show();
+    }
+
+
+
     //Action when we click on the submit button : display the Math View of the fct
-    protected void displayCheckView(View view){
+    protected void displayCheckView(View view) {
         formula.setText("$$" + fct_init.getText().toString() + "$$");
         fct = fct_init.getText().toString();
 
@@ -87,12 +103,12 @@ public class Maths_Function extends AppCompatActivity {
         editText.setId(i);
         editText.setHint("Enter your function");
 
-        //We need to move the submit fct according to the creation of new editText
-        RelativeLayout.LayoutParams mLayout2 = (RelativeLayout.LayoutParams) submitButton.getLayoutParams();
+        //We need to move the Math view(to display fct) according to the creation of new editText
+        RelativeLayout.LayoutParams mLayout2 = (RelativeLayout.LayoutParams) formula.getLayoutParams();
         mLayout2.addRule(RelativeLayout.BELOW, editText.getId());
 
 
-        //We create a new relative layout to be able to display the new edit text below the others
+        //We create a new relative layout to be able to display the new edit text above the others
         RelativeLayout.LayoutParams p = new RelativeLayout.LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT);
         if (i == 1 || i == 0) {
             p.addRule(RelativeLayout.BELOW, R.id.init_fct);
@@ -104,20 +120,17 @@ public class Maths_Function extends AppCompatActivity {
             parentEdit = (EditText) findViewById(getResources().getIdentifier(name, "id", getPackageName()));
             p.addRule(RelativeLayout.BELOW, parentEdit.getId());
         }
-        editText.setOnClickListener(new View.OnClickListener(){
+        editText.setOnClickListener(new View.OnClickListener() {
 
             @Override
-            public void onClick(View v) {
+            public void onClick(View v) { // we put a listener to display the editText(fct) chose by the user
                 // TODO Auto-generated method stub
                 formula.setText("$$" + editText.getText().toString() + "$$");
                 fct = editText.getText().toString();
             }
 
 
-
-
-
-            });
+        });
 
 
         editText.setLayoutParams(p);
@@ -128,25 +141,28 @@ public class Maths_Function extends AppCompatActivity {
     }
 
 
-    //Action to go to the Graph view
+    //Action to go to the Graph Setting
     protected void goToGraphSetting(View view) {
         EditText et;
-
         ViewGroup editTextsContainer = (ViewGroup) findViewById(R.id.relative);
-        int sum = 0;
+        fctList = new String[100];
         int i = editTextsContainer.getChildCount();
         int countTab = 0;
 
-        for (int j = 0; j < i; j++) { // Parcours des fils
+        for (int j = 0; j < i; j++) { //Browsing of the sons
             View child = editTextsContainer.getChildAt(j); // We gather all the child of the view
-            // if its an editText, we collect his contents and add it into the array
-            //we dont collect the first Edit Text xwhich is the choice of the variable
+
+            // if its an editText, we collect his content and add it into the array
+            //we dont collect the first Edit Text which is the choice of the variable
 
             if (child instanceof EditText && child.getId() != variable.getId()) {
 
+                String childContent = ((EditText) child).getText().toString();
                 if (!((EditText) child).getText().toString().isEmpty()) { // if the edit text is empty we dont take it
-                    fctList[countTab] = ((EditText) child).getText().toString();
+
+                    fctList[countTab] = childContent;
                 }
+
                 countTab++;
 
             }
@@ -156,14 +172,14 @@ public class Maths_Function extends AppCompatActivity {
         Intent intent = new Intent(this, Maths_Setting_Graph.class);
         intent.putExtra("fct", fctList);
         intent.putExtra("variable", var);
-        if (checkSetting(view, intent)) {
+        if (checkSetting(view) && checkFunction(view)) { //The fct need to be correct and all the requires fields completed
             startActivity(intent);
         }
     }
 
 
     //Check if all the information required are presents
-    protected boolean checkSetting(final View view, Intent intent) {
+    protected boolean checkSetting(final View view) {
         //At least the first EditText must be completed with a function and the variable EditTExt
 
         if (variable.getText().toString().equals("")) {
@@ -182,36 +198,49 @@ public class Maths_Function extends AppCompatActivity {
 
 
     //Check if the user uses well the variable he defines and not another one
-   /* protected boolean checkFunction(String fct){
+    protected boolean checkFunction(final View view) {
+        ViewGroup editTextsContainer = (ViewGroup) findViewById(R.id.relative);
+        boolean correct = true;
 
-        String regex = "([a-zA-z])*[^" +var+ "]";
+        int i = editTextsContainer.getChildCount();
+        for (int j = 0; j < i; j++) { // Parcours des fils
+            View child = editTextsContainer.getChildAt(j); // We gather all the child of the view
+            // if its an editText, we test if the fucntion is ok : user use the variable he defined earlier
 
 
-        if (fct.matches(regex)) { // find another variable that the one defined by the user
+            if (child instanceof EditText && child.getId() != variable.getId()) { // we dont check the edit text which contains the variable
 
 
-            //If not we display an Alert box to explain what's wrong
-            AlertDialog.Builder builder = new AlertDialog.Builder(this);
-            builder.setCancelable(true);
-            builder.setTitle("You need to the variable you defined");
-            builder.setPositiveButton("ok", new DialogInterface.OnClickListener() {
-                @Override
-                public void onClick(DialogInterface dialog, int which) {
-                    //After the close of the dialog box we open the page to choose the profil picture
+                if (!((EditText) child).getText().toString().isEmpty()) { // if the edit text is empty we dont take it
+
+                    // String to be scanned to find the pattern.
+                    String regex = "\\b(?!(\\bln\\b))(?!(\\blog\\b))(?!(\\be\\b))(?!(\\bsqrt\\b))[^" + var + "0-9+\\-^*()][a-zA-Z]*\\b";
+                    String fctText = ((EditText) child).getText().toString();
+                    // Create a Pattern object
+                    Pattern r = Pattern.compile(regex);
+
+                    // Now create matcher object.
+                    Matcher m = r.matcher(fctText);
+                    if (m.find()&&correct) {
+                        //find another variable than the one defined by the user
+                        ((EditText) child).setError("You have to use the variable you defined");
+                        correct = false;
+                    } else {
+                        //no match
+                        //we do nothing
+                    }
 
 
                 }
-            });
-
-            builder.show();
-
-            return false;
 
 
+            }
         }
-        return true;
 
-    }*/
+
+        return correct;
+
+    }
 
 
 }

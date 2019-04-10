@@ -5,7 +5,8 @@
 
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Maths_Setting_Graph">
+    tools:context=".Maths_Setting_Graph"
+    android:background="@color/colorPrimaryDark">
 
     <ScrollView
         android:layout_width="405dp"
@@ -31,42 +32,76 @@
             android:orientation="vertical">
 
 
+            <TextView
+                android:id="@+id/txt_choice_color"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/variable"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/white"
+                android:textColorHint="@color/darkgrey"
+
+                android:text="Choice of color"
+                android:textSize="20dp"
+                android:textStyle="bold" />
 
 
             <TextView
                 android:id="@+id/first_fct"
-                android:layout_width="100dp"
+                android:layout_width="wrap_content"
+                android:layout_below="@+id/txt_choice_color"
                 android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textColorHint="@color/darkgrey"
                 android:layout_marginTop="20dp"
                 android:ems="20"
 
 
-
-
                 />
+
+
+            <TextView
+                android:id="@+id/txt_boundaries"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/first_fct"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/white"
+                android:textColorHint="@color/darkgrey"
+                android:text="Choice of boundaries"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
             <TextView
                 android:id="@+id/txt_lower_bound"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/first_fct"
+                android:layout_below="@+id/txt_boundaries"
                 android:layout_alignParentRight="@+id/txt_upper_bound"
+                android:textColor="@color/white"
+                android:textColorHint="@color/darkgrey"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="20dp"
-                android:ems="20"
                 android:text="Lower bound"
+                android:ems="20"
+                android:textStyle="bold"
+
 
                 />
 
             <TextView
+                android:textColor="@color/white"
+                android:textColorHint="@color/darkgrey"
                 android:id="@+id/txt_upper_bound"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/first_fct"
+                android:layout_below="@+id/txt_boundaries"
                 android:layout_alignLeft="@+id/txt_lower_bound"
                 android:layout_centerHorizontal="true"
                 android:layout_marginLeft="188dp"
                 android:layout_marginTop="20dp"
                 android:ems="20"
+                android:textStyle="bold"
                 android:text="Upper bound " />
 
 
@@ -76,6 +111,8 @@
                 android:layout_height="match_parent"
                 android:layout_below="@+id/txt_lower_bound"
                 android:layout_alignParentRight="@+id/upper_bound_x"
+                android:textColorHint="@color/darkgrey"
+                android:textColor="@color/white"
                 android:layout_marginTop="10dp"
                 android:ems="1"
                 android:hint="Horizontal axis"
@@ -89,6 +126,8 @@
                 android:layout_height="match_parent"
                 android:layout_below="@+id/txt_upper_bound"
                 android:layout_alignLeft="@+id/lower_bound_x"
+                android:textColorHint="@color/darkgrey"
+                android:textColor="@color/white"
                 android:layout_marginLeft="188dp"
                 android:layout_marginTop="10dp"
                 android:ems="1"
@@ -97,6 +136,8 @@
 
 
             <EditText
+                android:textColor="@color/white"
+                android:textColorHint="@color/darkgrey"
                 android:id="@+id/lower_bound_y"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -115,6 +156,8 @@
                 android:layout_height="match_parent"
                 android:layout_below="@+id/upper_bound_x"
                 android:layout_alignLeft="@+id/lower_bound_y"
+                android:textColorHint="@color/darkgrey"
+                android:textColor="@color/white"
                 android:layout_marginLeft="188dp"
                 android:layout_marginTop="10dp"
                 android:ems="1"
@@ -130,6 +173,8 @@
                 android:layout_marginTop="20dp"
                 android:onClick="goToGraph"
                 android:text="Ok"
+                android:background="@drawable/roundedbutton"
+                android:textColor="@color/white"
 
                 />
 
