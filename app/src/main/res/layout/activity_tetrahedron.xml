@@ -37,9 +37,10 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="47dp"
                 android:text="Area and Volume"
+                android:textColor="@color/colorAccent"
                 android:textSize="30sp"
                 android:textStyle="bold"
-                android:typeface="serif"
+                android:typeface="sans"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -51,9 +52,10 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="47dp"
                 android:text="Tetrahedron"
+                android:textColor="@color/white"
+                android:typeface="sans"
                 android:textSize="20dp"
                 android:textStyle="bold"
-                android:typeface="serif"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/title"
@@ -66,6 +68,9 @@
                 android:layout_marginTop="20dp"
                 android:ems="10"
                 android:hint="Tetraside"
+                android:textColorHint="@color/darkgrey"
+                android:textColor="@color/white"
+                android:typeface="sans"
                 android:inputType="numberDecimal|numberSigned"
                 app:layout_constraintTop_toBottomOf="@+id/Header" />
 
@@ -76,6 +81,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:text="Area and Volume"
+                android:textColor="@color/white"
+                android:typeface="sans"
+                android:background="@drawable/roundedbutton"
                 app:layout_constraintTop_toBottomOf="@+id/Tetraside" />
 
             <TextView
@@ -85,6 +93,8 @@
                 android:layout_marginTop="20dp"
                 android:text=""
                 android:textSize="24dp"
+                android:textColor="@color/white"
+                android:typeface="sans"
                 app:layout_constraintTop_toBottomOf="@+id/solve_button" />
 
 

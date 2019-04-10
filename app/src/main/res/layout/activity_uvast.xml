@@ -10,7 +10,8 @@
     android:paddingBottom="0dp"
     android:paddingLeft="0dp"
     android:paddingRight="0dp"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@color/colorPrimaryDark">
 
     <TextView
         android:id="@+id/info"
@@ -22,9 +23,9 @@
         android:layout_marginEnd="32dp"
         android:layout_marginRight="32dp"
         android:text="-Use '-999' = value you want.\n-Use '-888' = value you don't have.\n"
-        android:textColor="@color/colorPrimaryDark"
+        android:textColor="@color/colorAccent"
         android:textSize="20dp"
-        android:typeface="serif"
+        android:typeface="sans"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -37,6 +38,9 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="initial velocity 'u'"
+        android:textColorHint="@color/darkgrey"
+        android:textColor="@color/white"
+        android:typeface="sans"
         android:inputType="numberDecimal|numberSigned" />
 
     <EditText
@@ -45,6 +49,9 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="final velocity 'v'"
+        android:textColorHint="@color/darkgrey"
+        android:textColor="@color/white"
+        android:typeface="sans"
         android:inputType="numberDecimal|numberSigned" />
 
     <EditText
@@ -53,6 +60,9 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="acceleration 'a'"
+        android:textColorHint="@color/darkgrey"
+        android:textColor="@color/white"
+        android:typeface="sans"
         android:inputType="numberDecimal|numberSigned" />
 
     <EditText
@@ -61,6 +71,9 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="distance 's'"
+        android:textColorHint="@color/darkgrey"
+        android:textColor="@color/white"
+        android:typeface="sans"
         android:inputType="numberDecimal|numberSigned" />
     <EditText
         android:id="@+id/et_t"
@@ -68,36 +81,51 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="time 't'"
+        android:textColorHint="@color/darkgrey"
+        android:textColor="@color/white"
+        android:typeface="sans"
         android:inputType="numberDecimal|numberSigned" />
 
     <Button
         android:id="@+id/bt_go"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="SOLVE" />
+        android:text="SOLVE"
+        android:textColor="@color/white"
+        android:typeface="sans"
+        android:background="@drawable/roundedbutton"/>
     <Button
         android:id="@+id/clr"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="CLEAR" />
+        android:text="CLEAR"
+        android:background="@drawable/roundedbutton"
+        android:textColor="@color/white"
+        android:typeface="sans"/>
 
     <TextView
         android:id="@+id/tv_result01"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text=""
-        android:textSize="20dp"/>
+        android:textSize="20dp"
+        android:textColor="@color/white"
+        android:typeface="sans"/>
 
     <TextView
         android:id="@+id/tv_result02"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text=""
-        android:textSize="20dp"/>
+        android:textSize="20dp"
+        android:textColor="@color/white"
+        android:typeface="sans"/>
     <TextView
         android:id="@+id/tv_result03"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text=""
-        android:textSize="20dp"/>
+        android:textSize="20dp"
+        android:textColor="@color/white"
+        android:typeface="sans"/>
 </LinearLayout>

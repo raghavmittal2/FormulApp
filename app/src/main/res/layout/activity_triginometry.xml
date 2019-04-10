@@ -247,7 +247,7 @@
                 android:paddingLeft="10dp"
                 android:paddingTop="10dp"
                 android:textStyle="bold"
-                android:textColor="@color/white"
+                android:textColor="@color/colorAccent"
                 android:typeface="sans"
                 android:text="@string/sum_to_product_identities" />
 

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Rectangle"
-    android:background="@drawable/page">
+    android:background="@color/colorPrimaryDark">
 
     <ScrollView
         android:layout_width="405dp"
@@ -36,9 +36,10 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="47dp"
                 android:text="Area of 2 D Shapes"
+                android:textColor="@color/colorAccent"
                 android:textSize="30sp"
                 android:textStyle="bold"
-                android:typeface="serif"
+                android:typeface="sans"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -49,9 +50,10 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="47dp"
                 android:text="Rectangle"
+                android:textColor="@color/white"
                 android:textSize="20dp"
                 android:textStyle="bold"
-                android:typeface="serif"
+                android:typeface="sans"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/title"
@@ -64,6 +66,9 @@
                 android:layout_marginTop="20dp"
                 android:ems="10"
                 android:hint="Lenght"
+                android:textColorHint="@color/darkgrey"
+                android:textColor="@color/white"
+                android:typeface="sans"
                 android:inputType="numberDecimal|numberSigned"
                 app:layout_constraintTop_toBottomOf="@+id/Header" />
 
@@ -74,6 +79,9 @@
                 android:layout_marginTop="20dp"
                 android:ems="10"
                 android:hint="Breadth"
+                android:textColorHint="@color/darkgrey"
+                android:textColor="@color/white"
+                android:typeface="sans"
                 android:inputType="numberDecimal|numberSigned"
                 app:layout_constraintTop_toBottomOf="@+id/Recside1" />
 
@@ -85,6 +93,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:text="Area "
+                android:textColor="@color/white"
+                android:typeface="sans"
+                android:background="@drawable/roundedbutton"
                 app:layout_constraintTop_toBottomOf="@+id/Recside2" />
 
             <TextView
