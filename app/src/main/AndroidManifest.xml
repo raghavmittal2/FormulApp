@@ -46,7 +46,7 @@
             android:label="Conservation of Momentum" />
         <activity
             android:name=".Length_Area_page"
-            android:label="Lenghth and Area Page" />
+            android:label="Length and Area Page" />
         <activity
             android:name=".Physics_page"
             android:label="Physics" />
@@ -55,13 +55,13 @@
             android:label="Trigonometry" />
         <activity
             android:name=".quadrix"
-            android:label="Solve Quadratic Equation" />
+            android:label="Find the root of a quadratic function" />
         <activity
             android:name=".Circle"
             android:label="Circle" />
         <activity
             android:name=".Cone"
-            android:label="cone" />
+            android:label="Cone" />
         <activity
             android:name=".Cube"
             android:label="Cube" />
