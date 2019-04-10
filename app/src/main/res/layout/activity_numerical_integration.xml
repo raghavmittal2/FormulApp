@@ -9,22 +9,23 @@
     <!-- TODO add Mathview for result instead of TextView -->
     <EditText
         android:id="@+id/ni_f"
-        android:layout_width="333dp"
+        android:layout_width="222dp"
         android:layout_height="40dp"
         android:layout_marginTop="332dp"
-        android:layout_marginEnd="40dp"
-        android:layout_marginRight="40dp"
+        android:layout_marginEnd="152dp"
+        android:layout_marginRight="152dp"
         android:layout_marginBottom="8dp"
         android:hint="@string/ni_hint_f"
-        android:textColorHint="@color/darkgrey"
-        android:textColor="@color/white"
-        android:typeface="sans"
         android:inputType="text"
         android:lineSpacingExtra="8sp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/darkgrey"
         android:textSize="18sp"
+        android:typeface="sans"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.512" />
 
     <TextView
         android:id="@+id/integralsign"
@@ -36,13 +37,14 @@
         android:layout_marginRight="8dp"
         android:text="@string/integral"
         android:textColor="@color/colorAccent"
-        android:typeface="sans"
         android:textSize="24sp"
+        android:typeface="sans"
         app:layout_constraintBottom_toBottomOf="@+id/ni_f"
         app:layout_constraintEnd_toStartOf="@+id/ni_f"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/ni_f" />
+        app:layout_constraintTop_toTopOf="@+id/ni_f"
+        app:layout_constraintVertical_bias="1.0" />
     <!-- TODO add edittext for variable name -->
 
     <EditText
@@ -136,6 +138,49 @@
         app:layout_constraintHorizontal_bias="0.444"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ni_lower"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/ni_d"
+        android:layout_width="31dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/ni_text_d"
+        android:textColor="@color/colorAccent"
+        android:textSize="24sp"
+        android:textStyle="italic"
+        android:typeface="sans"
+        app:layout_constraintBottom_toBottomOf="@+id/ni_f"
+        app:layout_constraintEnd_toStartOf="@id/ni_variable"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/ni_f"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        tools:text="@string/ni_text_d" />
+
+    <EditText
+        android:id="@+id/ni_variable"
+        android:layout_width="92dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="8dp"
+        android:ems="10"
+        android:hint="@string/ni_variable_hint"
+        android:inputType="text"
+        android:textColor="@color/white"
+        android:textColorHint="@color/darkgrey"
+        android:textSize="18sp"
+        android:typeface="sans"
+        app:layout_constraintBottom_toBottomOf="@+id/ni_d"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0" />
 
 </android.support.constraint.ConstraintLayout>

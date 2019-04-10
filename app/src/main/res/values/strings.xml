@@ -34,7 +34,7 @@
     <string name="_2_cos_x_sin_y_sin_x_y_sin_x_y">2*cos(x)sin(y) = [sin(x+y) + sin(x−y)]</string>
     <string name="_2_sin_x_cos_y_sin_x_y_sin_x_y">2*sin(x)cos(y) = [sin(x+y) + sin(x−y)]</string>
     <string name="_2_sin_x_sin_y_cos_x_y_cos_x_y">2*sin(x)sin(y) = [cos(x−y) − cos(x+y)]</string>
-    <string name="solve_equation">SOLVE QUADRATIC EQUATION</string>
+    <string name="find_roots">FIND THE ROOT OF A QUADRATIC EQUATION</string>
     <string name="double_angle_identities">Double Angle Identities</string>
     <string name="sin_2x_2sin_x_cos_x">sin(2x) = 2sin(x)cos(x)</string>
     <string name="cos_2x_cos_x_cos_x_sin_x_sin_x">cos(2x) = cos(x)*cos(x) - sin(x)*sin(x)</string>
@@ -127,11 +127,13 @@
     <string name="two_d_shapes">2-D shapes</string>
     <string name="physics">Physics</string>
     <string name="logs_page">Calculate Logarithm</string>
-
+    <string name="log_text">Leave the unknown variable empty</string>
     <string name="title_activity_testcase">testcase</string>
     <string name="Differentiate">Differentiate</string>
     <string name="three_d_shapes">3-D shapes</string>
     <string name="Solve_maths_function">SOLVE FUNCTION</string>
+    <string name="ni_text_d">d</string>
+    <string name="ni_variable_hint">Put in the \n variable \n here</string>
 
     <string-array name="colors">
         <item>Blue</item>

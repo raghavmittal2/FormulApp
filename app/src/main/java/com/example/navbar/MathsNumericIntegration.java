@@ -34,11 +34,14 @@ public class MathsNumericIntegration extends AppCompatActivity {
         EditText ni_f = findViewById(R.id.ni_f);
         EditText lowerV = findViewById(R.id.ni_lower);
         EditText upperV = findViewById(R.id.ni_upper);
-        boolean emptyF,emptyUpper,emptyLower;
+        EditText variableT = findViewById(R.id.ni_variable);
+
+        boolean emptyF,emptyUpper,emptyLower,emptyVariable;
         emptyF = TextUtils.isEmpty(ni_f.getText().toString());
         emptyUpper = TextUtils.isEmpty(upperV.getText().toString());
         emptyLower = TextUtils.isEmpty(lowerV.getText().toString());
-        if ( emptyF || emptyUpper || emptyLower){
+        emptyVariable = TextUtils.isEmpty(variableT.getText().toString());
+        if ( emptyF || emptyUpper || emptyLower || emptyVariable){
             if (emptyF){
                 ni_f.setError("You need to enter a function");
             }
@@ -48,19 +51,24 @@ public class MathsNumericIntegration extends AppCompatActivity {
             if (emptyUpper){
                 upperV.setError("You need to enter an upper range value");
             }
+            if (emptyVariable){
+                upperV.setError("You need to enter the variable of the function");
+            }
+            //TODO make regex to check that the variable is actually in the function
             return;
         }
+        final String variable = variableT.getText().toString();
         final String fct = ni_f.getText().toString();
         //parse function for fast evaluation
         //TODO get variable name from edit text and not a dummy
-        myParser.addVariable("x", 0);
+        myParser.addVariable(variable, 0);
         myParser.parseExpression(fct);
         //Initialize Univariate function to pass to the integrator
         UnivariateFunction f = new UnivariateFunction() {
             @Override
             public double value(double x) {
                 // this implements the value() function of the UnivariateFunction interface
-                myParser.addVariable("x", x);
+                myParser.addVariable(variable, x);
                 double eval = myParser.getValue();
                 return eval;
             }

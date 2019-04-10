@@ -18,7 +18,7 @@ public class Logs_page extends AppCompatActivity {
     MathView function2;
     String text;
 
-    double a, b, c, d;
+    double a, b, c;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,22 +38,24 @@ public class Logs_page extends AppCompatActivity {
                     b = Double.parseDouble(et_b.getText().toString());
                     c = Double.parseDouble(et_c.getText().toString());
                     c = (1 / c);
-                    a = (int) Math.pow(b, c);
+                    a =  Math.pow(b, c);
+                    a = Math.round(a*100.0)/100.0;
                     tv_result.setText("a = " + a);
                 }
 
                 if(!et_a.getText().toString().equals("") && !et_c.getText().toString().equals("")) {
                         a = Double.parseDouble(et_a.getText().toString());
                         c = Double.parseDouble(et_c.getText().toString());
-                        b = (int) Math.pow(a,c);
+                        b = Math.pow(a,c);
+                        b = Math.round(b*100.0)/100.0;
                         tv_result.setText("b = " + b);
                 }
 
                 if(!et_a.getText().toString().equals("") && !et_b.getText().toString().equals("")) {
                     b = Double.parseDouble(et_b.getText().toString());
                     a = Double.parseDouble(et_a.getText().toString());
-                    c = (int) (Math.log(b) / Math.log(a));
-                        tv_result.setText("c = " + c );
+                    c = Math.round(Math.log(b) * 100.0 / Math.log(a))/100.0;
+                    tv_result.setText("c = " + c );
 
                 }
             }
