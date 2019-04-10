@@ -5,30 +5,62 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:background="@color/colorPrimaryDark">
+    android:background="null">
+
+    <TextView
+        android:id="@+id/title"
+        style="@style/FAheaderItalics"
+        android:text="Logarithms"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/log_box"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="120dp"
+        android:layout_marginLeft="120dp"
+        android:layout_marginTop="8dp"
+        android:text="log"
+        android:textSize="35sp"
+        android:typeface="serif"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title" />
+
+    <TextView
+        android:id="@+id/b_c_view"
+        android:layout_width="wrap_content"
+        android:layout_height="47dp"
+        android:layout_marginStart="200dp"
+        android:layout_marginLeft="200dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:text="(b)  =  c"
+        android:textSize="35sp"
+        android:typeface="serif"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/log_box" />
+
+    <TextView
+        android:id="@+id/a_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
-        android:text="log"
-        android:textColor="@color/white"
+        android:text="a"
         android:textSize="35sp"
-        android:typeface="sans"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.402"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.043" />
-
+        android:typeface="serif"
+        app:layout_constraintBottom_toTopOf="@+id/user_manual"
+        app:layout_constraintEnd_toStartOf="@+id/b_c_view"
+        app:layout_constraintStart_toEndOf="@+id/log_box"
+        app:layout_constraintTop_toBottomOf="@+id/title" />
 
     <EditText
         android:id="@+id/et_a"
@@ -37,9 +69,6 @@
         android:layout_marginTop="30dp"
         android:ems="10"
         android:hint="a"
-        android:textColorHint="@color/darkgrey"
-        android:textColor="@color/white"
-        android:typeface="sans"
         android:inputType="numberDecimal|numberSigned"
         app:layout_constraintTop_toBottomOf="@+id/user_manual"/>
 
@@ -49,9 +78,6 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="b"
-        android:textColorHint="@color/darkgrey"
-        android:textColor="@color/white"
-        android:typeface="sans"
         android:inputType="numberDecimal|numberSigned"
         app:layout_constraintTop_toBottomOf="@+id/et_a"/>
 
@@ -61,20 +87,20 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="c"
-        android:textColorHint="@color/darkgrey"
-        android:textColor="@color/white"
-        android:typeface="sans"
         android:inputType="numberDecimal|numberSigned"
         app:layout_constraintTop_toBottomOf="@+id/et_b"/>
 
     <Button
         android:id="@+id/bt_go"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        style="@style/solveButton"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
         android:text="SOLVE"
-        android:background="@drawable/roundedbutton"
-        android:textColor="@color/white"
-        app:layout_constraintTop_toBottomOf="@+id/et_c"/>
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_c" />
 
     <TextView
         android:id="@+id/tv_result"
@@ -82,34 +108,11 @@
         android:layout_height="wrap_content"
         android:text=""
         android:textSize="24dp"
-        android:textColor="@color/white"
+
         app:layout_constraintTop_toBottomOf="@+id/bt_go"/>
 
-    <TextView
-        android:id="@+id/a_view"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="56dp"
-        android:text="a"
-        android:textColor="@color/white"
-        android:textSize="35sp"
-        android:typeface="sans"
-        app:layout_constraintEnd_toStartOf="@+id/b_c_view"
-        app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/b_c_view"
-        android:layout_width="wrap_content"
-        android:layout_height="47dp"
-        android:layout_marginTop="36dp"
-        android:layout_marginEnd="75dp"
-        android:layout_marginRight="75dp"
-        android:text="(b)  =  c"
-        android:textColor="@color/white"
-        android:textSize="35sp"
-        android:typeface="sans"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+
 
     <TextView
         android:id="@+id/user_manual"
@@ -118,8 +121,7 @@
         android:layout_marginTop="25dp"
         android:text="Input the variables you know and place 999 on the unknown line"
         android:textSize="30sp"
-        android:typeface="sans"
-        android:textColor="@color/white"
+        android:typeface="serif"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/log_box" />
 </android.support.constraint.ConstraintLayout>

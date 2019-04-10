@@ -1,6 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-
-<LinearLayout
+<?xml version="1.0" encoding="utf-8"?><android.support.constraint.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -10,122 +8,130 @@
     android:paddingBottom="0dp"
     android:paddingLeft="0dp"
     android:paddingRight="0dp"
-    android:orientation="vertical"
-    android:background="@color/colorPrimaryDark">
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/title"
+        style="@style/FAheaderItalics"
+        android:text="Velocity"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 
     <TextView
         android:id="@+id/info"
-        android:layout_width="300dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="67dp"
-        android:layout_marginLeft="60dp"
-        android:layout_marginTop="28dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginRight="32dp"
+        android:layout_marginTop="20dp"
         android:text="-Use '-999' = value you want.\n-Use '-888' = value you don't have.\n"
-        android:textColor="@color/colorAccent"
+        android:textColor="@color/colorPrimaryDark"
         android:textSize="20dp"
-        android:typeface="sans"
+        android:typeface="serif"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/title" />
 
 
     <EditText
         android:id="@+id/et_u"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
         android:ems="10"
         android:hint="initial velocity 'u'"
-        android:textColorHint="@color/darkgrey"
-        android:textColor="@color/white"
-        android:typeface="sans"
-        android:inputType="numberDecimal|numberSigned" />
+        android:inputType="numberDecimal|numberSigned"
+        app:layout_constraintTop_toBottomOf="@+id/info" />
 
     <EditText
         android:id="@+id/et_v"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
         android:ems="10"
         android:hint="final velocity 'v'"
-        android:textColorHint="@color/darkgrey"
-        android:textColor="@color/white"
-        android:typeface="sans"
-        android:inputType="numberDecimal|numberSigned" />
+        android:inputType="numberDecimal|numberSigned"
+        app:layout_constraintTop_toBottomOf="@+id/tv_result03" />
 
     <EditText
         android:id="@+id/et_a"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
         android:ems="10"
         android:hint="acceleration 'a'"
-        android:textColorHint="@color/darkgrey"
-        android:textColor="@color/white"
-        android:typeface="sans"
-        android:inputType="numberDecimal|numberSigned" />
+        android:inputType="numberDecimal|numberSigned"
+        app:layout_constraintTop_toBottomOf="@+id/et_u" />
 
     <EditText
         android:id="@+id/et_s"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
         android:ems="10"
         android:hint="distance 's'"
-        android:textColorHint="@color/darkgrey"
-        android:textColor="@color/white"
-        android:typeface="sans"
-        android:inputType="numberDecimal|numberSigned" />
+        android:inputType="numberDecimal|numberSigned"
+        app:layout_constraintTop_toBottomOf="@+id/et_a" />
+
     <EditText
         android:id="@+id/et_t"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
         android:ems="10"
         android:hint="time 't'"
-        android:textColorHint="@color/darkgrey"
-        android:textColor="@color/white"
-        android:typeface="sans"
-        android:inputType="numberDecimal|numberSigned" />
+        android:inputType="numberDecimal|numberSigned"
+        app:layout_constraintTop_toBottomOf="@+id/et_s" />
 
     <Button
         android:id="@+id/bt_go"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        style="@style/solveButton"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
         android:text="SOLVE"
-        android:textColor="@color/white"
-        android:typeface="sans"
-        android:background="@drawable/roundedbutton"/>
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_t" />
+
     <Button
         android:id="@+id/clr"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        style="@style/solveButton"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
         android:text="CLEAR"
-        android:background="@drawable/roundedbutton"
-        android:textColor="@color/white"
-        android:typeface="sans"/>
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bt_go" />
 
     <TextView
         android:id="@+id/tv_result01"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
         android:text=""
         android:textSize="20dp"
-        android:textColor="@color/white"
-        android:typeface="sans"/>
+        app:layout_constraintTop_toBottomOf="@+id/clr" />
 
     <TextView
         android:id="@+id/tv_result02"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
         android:text=""
         android:textSize="20dp"
-        android:textColor="@color/white"
-        android:typeface="sans"/>
+        app:layout_constraintTop_toBottomOf="@+id/tv_result01" />
+
     <TextView
         android:id="@+id/tv_result03"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
         android:text=""
         android:textSize="20dp"
-        android:textColor="@color/white"
-        android:typeface="sans"/>
-</LinearLayout>
+        app:layout_constraintTop_toBottomOf="@+id/tv_result02" />
+</android.support.constraint.ConstraintLayout>

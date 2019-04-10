@@ -3,13 +3,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".Getting_Area_Volume"
-    android:background="@color/colorPrimaryDark">
+    android:layout_height="match_parent">
 
     <ScrollView
         android:layout_width="405dp"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"
@@ -24,25 +22,18 @@
         app:layout_constraintVertical_bias="1.0">
 
 
-        <LinearLayout
+        <android.support.constraint.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_height="match_parent">
 
 
 
             <TextView
                 android:id="@+id/title"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="47dp"
+                style="@style/FAheaderItalics"
                 android:text="Area and Volume"
-                android:textColor="@color/white"
-                android:textSize="30sp"
-                android:textStyle="bold"
-                android:typeface="sans"
-                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
@@ -51,10 +42,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="47dp"
                 android:text="Cylinder"
-                android:textColor="@color/white"
                 android:textSize="20dp"
                 android:textStyle="bold"
-                android:typeface="sans"
+                android:typeface="serif"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 tools:layout_editor_absoluteY="178dp"
@@ -67,8 +57,6 @@
                 android:layout_marginTop="20dp"
                 android:ems="10"
                 android:hint="Radius"
-                android:textColorHint="@color/darkgrey"
-                android:textColor="@color/white"
                 android:inputType="numberDecimal|numberSigned"
                 app:layout_constraintTop_toBottomOf="@+id/CylinderHeader"/>
 
@@ -79,20 +67,20 @@
                 android:layout_marginTop="20dp"
                 android:ems="10"
                 android:hint="Height"
-                android:textColorHint="@color/darkgrey"
-                android:textColor="@color/white"
                 android:inputType="numberDecimal|numberSigned"
                 app:layout_constraintTop_toBottomOf="@+id/CylinderRadius" />
 
             <Button
                 android:id="@+id/solve_button"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
+                style="@style/solveButton"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
                 android:text="Area and Volume"
-                android:background="@drawable/roundedbutton"
-                android:textColor="@color/white"
-                app:layout_constraintTop_toBottomOf="@+id/Cylinder_length"/>
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Cylinder_length" />
 
             <TextView
                 android:id="@+id/cylinder_result"
@@ -101,27 +89,21 @@
                 android:layout_marginTop="20dp"
                 android:text=""
                 android:textSize="24dp"
-                android:textColor="@color/white"
                 app:layout_constraintTop_toBottomOf="@+id/solve_button" />
-
-
-
 
 
             <TextView
                 android:id="@+id/ConeHeader"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="47dp"
+                android:layout_marginTop="8dp"
                 android:text="Cone"
                 android:textSize="20dp"
-                android:textColor="@color/white"
                 android:textStyle="bold"
-                android:typeface="sans"
+                android:typeface="serif"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                tools:layout_editor_absoluteY="178dp"
-                app:layout_constraintTop_toBottomOf="@+id/solve_button"/>
+                app:layout_constraintTop_toBottomOf="@+id/cylinder_result" />
 
             <EditText
                 android:id="@+id/ConeRadius"
@@ -130,8 +112,6 @@
                 android:layout_marginTop="20dp"
                 android:ems="10"
                 android:hint="Radius"
-                android:textColorHint="@color/darkgrey"
-                android:textColor="@color/white"
                 android:inputType="numberDecimal|numberSigned"
                 app:layout_constraintTop_toBottomOf="@+id/ConeHeader"/>
 
@@ -142,8 +122,6 @@
                 android:layout_marginTop="20dp"
                 android:ems="10"
                 android:hint="Length"
-                android:textColorHint="@color/darkgrey"
-                android:textColor="@color/white"
                 android:inputType="numberDecimal|numberSigned"
                 app:layout_constraintTop_toBottomOf="@+id/ConeRadius" />
 
@@ -154,20 +132,16 @@
                 android:layout_marginTop="20dp"
                 android:ems="10"
                 android:hint="Height"
-                android:textColorHint="@color/darkgrey"
-                android:textColor="@color/white"
                 android:inputType="numberDecimal|numberSigned"
                 app:layout_constraintTop_toBottomOf="@+id/Cone_length" />
 
             <Button
                 android:id="@+id/solve_cone_button"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
+                style="@style/solveButton"
                 android:text="Area and Volume"
-                android:background="@drawable/roundedbutton"
-                android:textColor="@color/white"
-                app:layout_constraintTop_toBottomOf="@+id/Cone_length"/>
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Cone_height" />
 
             <TextView
                 android:id="@+id/Cone_result"
@@ -176,25 +150,21 @@
                 android:layout_marginTop="20dp"
                 android:text=""
                 android:textSize="24dp"
-                android:textColor="@color/white"
                 app:layout_constraintTop_toBottomOf="@+id/solve_cone_button" />
-
 
 
             <TextView
                 android:id="@+id/SphereHeader"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="47dp"
+                android:layout_marginTop="8dp"
                 android:text="Sphere"
-                android:textColor="@color/white"
                 android:textSize="20dp"
                 android:textStyle="bold"
-                android:typeface="sans"
+                android:typeface="serif"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                tools:layout_editor_absoluteY="178dp"
-                app:layout_constraintTop_toBottomOf="@+id/solve_cone_button"/>
+                app:layout_constraintTop_toBottomOf="@+id/Cone_result" />
 
             <EditText
                 android:id="@+id/Sphere_radius"
@@ -203,21 +173,21 @@
                 android:layout_marginTop="20dp"
                 android:ems="10"
                 android:hint="Radius"
-                android:textColorHint="@color/darkgrey"
-                android:textColor="@color/white"
                 android:inputType="numberDecimal|numberSigned"
                 app:layout_constraintTop_toBottomOf="@+id/SphereHeader"/>
 
 
             <Button
                 android:id="@+id/solve_sphere_button"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
+                style="@style/solveButton"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
                 android:text="Area and Volume"
-                android:background="@drawable/roundedbutton"
-                android:textColor="@color/white"
-                app:layout_constraintTop_toBottomOf="@+id/Sphere_radius"/>
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Sphere_radius" />
 
             <TextView
                 android:id="@+id/Sphere_result"
@@ -226,13 +196,10 @@
                 android:layout_marginTop="20dp"
                 android:text=""
                 android:textSize="24dp"
-                android:textColor="@color/white"
-                android:typeface="sans"
                 app:layout_constraintTop_toBottomOf="@+id/solve_sphere_button" />
 
 
-
-        </LinearLayout>
+        </android.support.constraint.ConstraintLayout>
     </ScrollView>
 
 

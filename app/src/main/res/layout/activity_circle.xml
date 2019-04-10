@@ -4,12 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Getting_Area_Volume"
-    android:background="@color/colorPrimaryDark">
+    android:background="@null">
 
     <ScrollView
         android:layout_width="405dp"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"
@@ -19,27 +18,19 @@
         android:scrollbarStyle="outsideInset"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
 
-        <LinearLayout
+        <android.support.constraint.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_height="match_parent">
 
 
             <TextView
                 android:id="@+id/title"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="47dp"
-                android:text="Area of 2 D Shapes"
-                android:textSize="30sp"
-                android:textStyle="bold"
-                android:textColor="@color/white"
-                android:typeface="sans"
+                style="@style/FAheaderItalics"
+                android:text="Area of 2D Shapes"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -50,10 +41,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="47dp"
                 android:text="Circle"
-                android:textColor="@color/white"
                 android:textSize="20dp"
                 android:textStyle="bold"
-                android:typeface="sans"
+                android:typeface="serif"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/title"
@@ -66,20 +56,16 @@
                 android:layout_marginTop="20dp"
                 android:ems="10"
                 android:hint="Radius"
-                android:textColor="@color/white"
-                android:textColorHint="@color/darkgrey"
                 android:inputType="numberDecimal|numberSigned"
                 app:layout_constraintTop_toBottomOf="@+id/Header" />
 
 
             <Button
                 android:id="@+id/solve_button"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:text="Area "
-                android:background="@drawable/roundedbutton"
-                android:textColor="@color/white"
+                style="@style/solveButton"
+                android:text="Area"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/Circleradius" />
 
             <TextView
@@ -88,12 +74,10 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:text=""
-                android:textColor="@color/white"
                 android:textSize="24dp"
                 app:layout_constraintTop_toBottomOf="@+id/solve_button" />
 
-
-        </LinearLayout>
+        </android.support.constraint.ConstraintLayout>
     </ScrollView>
 
 

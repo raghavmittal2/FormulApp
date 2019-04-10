@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Rhombus"
-    android:background="@color/colorPrimaryDark">
+    android:background="@null">
+
+
 
     <ScrollView
         android:layout_width="405dp"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"
@@ -19,41 +21,30 @@
         android:scrollbarStyle="outsideInset"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
 
 
             <TextView
                 android:id="@+id/title"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="47dp"
-                android:text="Area of 2 D Shapes"
-                android:textColor="@color/white"
-                android:textSize="30sp"
-                android:textStyle="bold"
-                android:typeface="sans"
+                style="@style/FAheaderItalics"
+                android:text="Area of 2D Shapes"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_gravity="center" />
 
             <TextView
                 android:id="@+id/Header"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="47dp"
-                android:textColor="@color/white"
                 android:text="Rhombus"
                 android:textSize="20dp"
                 android:textStyle="bold"
-                android:typeface="sans"
+                android:typeface="serif"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/title"
@@ -66,8 +57,6 @@
                 android:layout_marginTop="20dp"
                 android:ems="10"
                 android:hint="Diagonal 1"
-                android:textColor="@color/white"
-                android:textColorHint="@color/darkgrey"
                 android:inputType="numberDecimal|numberSigned"
                 app:layout_constraintTop_toBottomOf="@+id/Header" />
 
@@ -78,8 +67,6 @@
                 android:layout_marginTop="20dp"
                 android:ems="10"
                 android:hint="Diagonal 2"
-                android:textColorHint="@color/darkgrey"
-                android:textColor="@color/white"
                 android:inputType="numberDecimal|numberSigned"
                 app:layout_constraintTop_toBottomOf="@+id/Rhodia1" />
 
@@ -87,12 +74,10 @@
 
             <Button
                 android:id="@+id/solve_button"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:background="@drawable/roundedbutton"
-                android:textColor="@color/white"
-                android:text="Area "
+                style="@style/solveButton"
+                android:text="Area"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/Rhodia2" />
 
             <TextView
@@ -102,11 +87,8 @@
                 android:layout_marginTop="20dp"
                 android:text=""
                 android:textSize="24dp"
-                android:textColor="@color/white"
                 app:layout_constraintTop_toBottomOf="@+id/solve_button" />
 
-
-        </LinearLayout>
     </ScrollView>
 
 

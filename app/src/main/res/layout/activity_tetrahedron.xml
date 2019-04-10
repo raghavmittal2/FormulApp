@@ -4,12 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Tetrahedron"
-    android:background="@drawable/page">
+    android:background="@null">
 
     <ScrollView
         android:layout_width="405dp"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"
@@ -19,28 +18,18 @@
         android:scrollbarStyle="outsideInset"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.375">
+        app:layout_constraintTop_toTopOf="parent" >
 
 
-        <LinearLayout
+        <android.support.constraint.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
+            android:layout_height="match_parent">
 
             <TextView
                 android:id="@+id/title"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="47dp"
+                style="@style/FAheaderItalics"
                 android:text="Area and Volume"
-                android:textColor="@color/colorAccent"
-                android:textSize="30sp"
-                android:textStyle="bold"
-                android:typeface="sans"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -52,10 +41,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="47dp"
                 android:text="Tetrahedron"
-                android:textColor="@color/white"
-                android:typeface="sans"
                 android:textSize="20dp"
                 android:textStyle="bold"
+                android:typeface="serif"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/title"
@@ -68,22 +56,20 @@
                 android:layout_marginTop="20dp"
                 android:ems="10"
                 android:hint="Tetraside"
-                android:textColorHint="@color/darkgrey"
-                android:textColor="@color/white"
-                android:typeface="sans"
                 android:inputType="numberDecimal|numberSigned"
                 app:layout_constraintTop_toBottomOf="@+id/Header" />
 
 
             <Button
                 android:id="@+id/solve_button"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
+                style="@style/solveButton"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
                 android:text="Area and Volume"
-                android:textColor="@color/white"
-                android:typeface="sans"
-                android:background="@drawable/roundedbutton"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/Tetraside" />
 
             <TextView
@@ -93,12 +79,9 @@
                 android:layout_marginTop="20dp"
                 android:text=""
                 android:textSize="24dp"
-                android:textColor="@color/white"
-                android:typeface="sans"
                 app:layout_constraintTop_toBottomOf="@+id/solve_button" />
 
-
-        </LinearLayout>
+        </android.support.constraint.ConstraintLayout>
     </ScrollView>
 
 

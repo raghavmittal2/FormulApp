@@ -3,9 +3,16 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".differentiation"
-    android:background="@color/colorPrimaryDark">
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/title"
+        style="@style/FAheaderItalics"
+        android:text="Differentiation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 
 
     <EditText
@@ -14,20 +21,20 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:ems="10"
-        android:hint="Enter yous function!"
-        android:textColorHint="@color/darkgrey"
-        android:textColor="@color/white"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:hint="Enter your function!"
+        app:layout_constraintTop_toBottomOf="@+id/title" />
 
-        <Button
-            android:id="@+id/show_function"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:text="Show!"
-            android:background="@drawable/roundedbutton"
-            android:textColor="@color/white"
-            app:layout_constraintTop_toBottomOf="@+id/function"/>
+    <Button
+        android:id="@+id/show_function"
+        style="@style/solveButton"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:text="Show!"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/function" />
 
 
         <io.github.kexanie.library.MathView
@@ -36,32 +43,31 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:text=""
-            android:textColor="@color/white"
-            android:typeface="sans"
             app:layout_constraintTop_toBottomOf="@+id/show_function"
             ></io.github.kexanie.library.MathView>
 
-        <Button
-            android:id="@+id/diff_view_btn"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="80dp"
-            android:text="Differentiate"
-            android:background="@drawable/roundedbutton"
-            android:textColor="@color/white"
-            app:layout_constraintTop_toBottomOf="@+id/show_function"/>
+    <Button
+        android:id="@+id/diff_view_btn"
+        style="@style/solveButton"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:text="Differentiate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/function2" />
 
-        <TextView
-            android:id="@+id/diff_result"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text=""
-            android:textStyle="bold"
-            android:layout_marginTop="110dp"
-            android:typeface="serif"
-            android:textSize="40dp"
-            android:textColor="@color/white"
-            app:layout_constraintTop_toTopOf="@+id/diff_view_btn" />
+    <TextView
+        android:id="@+id/diff_result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text=""
+        android:textSize="40dp"
+        android:textStyle="bold"
+        android:typeface="serif"
+        app:layout_constraintTop_toBottomOf="@+id/diff_view_btn" />
 
 
 

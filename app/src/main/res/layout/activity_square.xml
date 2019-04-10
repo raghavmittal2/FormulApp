@@ -4,12 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Square"
-    android:background="@color/colorPrimaryDark">
+    android:background="@null">
 
     <ScrollView
         android:layout_width="405dp"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"
@@ -24,22 +23,15 @@
         app:layout_constraintTop_toTopOf="parent">
 
 
-        <LinearLayout
+        <android.support.constraint.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_height="match_parent">
 
 
             <TextView
                 android:id="@+id/title"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="47dp"
-                android:text="Area of 2 D Shapes"
-                android:textColor="@color/colorAccent"
-                android:typeface="sans"
-                android:textSize="30sp"
-                android:textStyle="bold"
+                style="@style/FAheaderItalics"
+                android:text="Area of 2D Shapes"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -51,9 +43,8 @@
                 android:layout_marginTop="47dp"
                 android:text="Square"
                 android:textSize="20dp"
-                android:textColor="@color/white"
                 android:textStyle="bold"
-                android:typeface="sans"
+                android:typeface="serif"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/title"
@@ -66,22 +57,20 @@
                 android:layout_marginTop="20dp"
                 android:ems="10"
                 android:hint="Side"
-                android:textColorHint="@color/darkgrey"
-                android:textColor="@color/white"
-                android:typeface="sans"
                 android:inputType="numberDecimal|numberSigned"
                 app:layout_constraintTop_toBottomOf="@+id/Header" />
 
 
             <Button
                 android:id="@+id/solve_button"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
+                style="@style/solveButton"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
                 android:text="Area "
-                android:textColor="@color/white"
-                android:typeface="sans"
-                android:background="@drawable/roundedbutton"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/Squareside" />
 
             <TextView
@@ -93,8 +82,7 @@
                 android:textSize="24dp"
                 app:layout_constraintTop_toBottomOf="@+id/solve_button" />
 
-
-        </LinearLayout>
+        </android.support.constraint.ConstraintLayout>
     </ScrollView>
 
 

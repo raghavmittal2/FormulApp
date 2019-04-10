@@ -1,170 +1,104 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/back"
-    tools:context=".Three_d_page">
-    <TextView
-        android:id="@+id/Header"
-        android:layout_width="296dp"
-        android:layout_height="55dp"
-        android:layout_marginStart="67dp"
-        android:layout_marginLeft="67dp"
-        android:layout_marginTop="28dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginRight="32dp"
-        android:text="@string/three_d_shapes"
-        android:textColor="@color/white"
-        android:textSize="30sp"
-        android:textStyle="bold"
-        android:typeface="sans"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    android:background="null">
 
-    <Button
-        android:id="@+id/sph_btn"
-        android:layout_width="296dp"
-        android:layout_height="60dp"
-        android:layout_marginStart="67dp"
-        android:layout_marginLeft="67dp"
-        android:layout_marginTop="64dp"
-        android:background="@drawable/roundedbutton"
-        android:textColor="@color/white"
-        android:text="Sphere"
-        android:textSize="18sp"
-        android:typeface="sans"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Header" />
 
-    <Button
-        android:id="@+id/cub_btn"
-        android:layout_width="296dp"
-        android:layout_height="60dp"
-        android:layout_marginStart="67dp"
-        android:layout_marginLeft="67dp"
-        android:layout_marginTop="20dp"
-        android:background="@drawable/roundedbutton"
-        android:textColor="@color/white"
-        android:text="Cube"
-        android:textSize="18sp"
-        android:typeface="sans"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/sph_btn" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp">
 
-    <Button
-        android:id="@+id/cui_btn"
-        android:layout_width="296dp"
-        android:layout_height="60dp"
-        android:layout_marginStart="67dp"
-        android:layout_marginLeft="67dp"
-        android:layout_marginTop="20dp"
-        android:background="@drawable/roundedbutton"
-        android:textColor="@color/white"
-        android:text="Cuboid"
-        android:textSize="18sp"
-        android:typeface="sans"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cub_btn" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/Header"
+                android:text="3 D Shapes"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                style="@style/FAheaderItalics" />
 
-    <Button
-        android:id="@+id/con_btn"
-        android:layout_width="296dp"
-        android:layout_height="60dp"
-        android:layout_marginStart="67dp"
-        android:layout_marginLeft="67dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="48dp"
-        android:layout_marginRight="48dp"
-        android:background="@drawable/roundedbutton"
-        android:textColor="@color/white"
-        android:text="Cone"
-        android:textSize="18sp"
-        android:typeface="sans"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cui_btn" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
 
-    <Button
-        android:id="@+id/fru_btn"
-        android:layout_width="296dp"
-        android:layout_height="60dp"
-        android:layout_marginStart="67dp"
-        android:layout_marginLeft="67dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="48dp"
-        android:layout_marginRight="48dp"
-        android:background="@drawable/roundedbutton"
-        android:textColor="@color/white"
-        android:text="Frustum"
-        android:textSize="18sp"
-        android:typeface="sans"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/con_btn" />
+                <Button
+                    android:id="@+id/sph_btn"
+                    style="@style/FAtile"
+                    android:layout_weight="2"
+                    android:background="@drawable/cyan"
+                    android:text="Sphere" />
 
-    <Button
-        android:id="@+id/tetra_btn"
-        android:layout_width="296dp"
-        android:layout_height="60dp"
-        android:layout_marginStart="67dp"
-        android:layout_marginLeft="67dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="48dp"
-        android:layout_marginRight="48dp"
-        android:background="@drawable/roundedbutton"
-        android:textColor="@color/white"
-        android:text="Tetrahedron"
-        android:textSize="18sp"
-        android:typeface="sans"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/fru_btn" />
+                <Button
+                    android:id="@+id/cub_btn"
+                    style="@style/FAtile"
+                    android:text="Cube"
+                    android:background="@drawable/softblue"
+                    android:layout_weight="2" />
 
-    <Button
-        android:id="@+id/ocz_btn"
-        android:layout_width="296dp"
-        android:layout_height="60dp"
-        android:layout_marginStart="67dp"
-        android:layout_marginLeft="67dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="48dp"
-        android:layout_marginRight="48dp"
-        android:background="@drawable/roundedbutton"
-        android:textColor="@color/white"
-        android:text="Octahedron"
-        android:textSize="18sp"
-        android:typeface="sans"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tetra_btn" />
+                <Button
+                    android:id="@+id/cui_btn"
+                    style="@style/FAtile"
+                    android:text="Cuboid"
+                    android:layout_weight="2"
+                    android:background="@drawable/lavender" />
+            </LinearLayout>
 
-    <Button
-        android:id="@+id/cyl_btn"
-        android:layout_width="296dp"
-        android:layout_height="60dp"
-        android:layout_marginStart="67dp"
-        android:layout_marginLeft="67dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="48dp"
-        android:layout_marginRight="48dp"
-        android:background="@drawable/roundedbutton"
-        android:textColor="@color/white"
-        android:text="Cylinder"
-        android:textSize="18sp"
-        android:typeface="serif"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ocz_btn" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
 
+                <Button
+                    android:id="@+id/con_btn"
+                    style="@style/FAtile"
+                    android:layout_weight="2"
+                    android:background="@drawable/lavender"
+                    android:text="Cone" />
+
+                <Button
+                    android:id="@+id/frus_btn"
+                    style="@style/FAtile"
+                    android:text="Frustrum"
+                    android:background="@drawable/cyan"
+                    android:layout_weight="2" />
+
+                <Button
+                    android:id="@+id/tetr_btn"
+                    style="@style/FAtile"
+                    android:text="Tetrahedron"
+                    android:layout_weight="2"
+                    android:background="@drawable/softblue" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/ocz_btn"
+                    style="@style/FAtile"
+                    android:layout_weight="2"
+                    android:background="@drawable/softblue"
+                    android:text="Octahedron" />
+
+                <Button
+                    android:id="@+id/cyl_btn"
+                    style="@style/FAtile"
+                    android:text="Cylinder"
+                    android:background="@drawable/lavender"
+                    android:layout_weight="2" />
+
+                </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
 </android.support.constraint.ConstraintLayout>

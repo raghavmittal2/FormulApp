@@ -3,9 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    tools:context=".Length_Area_page"
-    android:background="@color/colorPrimaryDark">
+    android:layout_height="wrap_content">
 
     <ScrollView
         android:layout_width="wrap_content"
@@ -31,18 +29,8 @@
 
             <TextView
                 android:id="@+id/Header"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="67dp"
-                android:layout_marginLeft="67dp"
-                android:layout_marginTop="28dp"
-                android:layout_marginEnd="32dp"
-                android:layout_marginRight="32dp"
+                style="@style/FAheaderItalics"
                 android:text="Electricity Formulae"
-                android:textColor="@color/white"
-                android:textSize="25sp"
-                android:textStyle="bold"
-                android:typeface="sans"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
@@ -60,8 +48,6 @@ Resistors in Parallel: 1/R = 1/R1 + 1/R2\n\nWheatstone Bridge: R1/R2 = R3/R4\n\n
 Force on Current-carrying conductor: F = IlB\n\nForce on Charged Particle: F = qvB\n\nInduced emf: E = -dO/dt\n\nCapacitance: C = q/V\n
 Parallel-plate capacitor: C = Aε/d\n\nEnergy stored in Capacitor: W = 1/2 * CV^2\nznPower: P = VI\n"
                 android:textSize="20sp"
-                android:textColor="@color/white"
-                android:typeface="sans"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toEndOf="@+id/imageView"

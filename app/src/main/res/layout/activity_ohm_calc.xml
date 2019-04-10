@@ -4,12 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimaryDark"
-    tools:context=".OhmLawCalc">
-
+    android:background="@null">
     <ScrollView
         android:layout_width="405dp"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"
@@ -20,13 +18,21 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.363">
+        app:layout_constraintTop_toTopOf="parent">
 
-        <LinearLayout
+        <android.support.constraint.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/title"
+                style="@style/FAheaderItalics"
+                android:text="Ohm Calulator"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
 
             <EditText
                 android:id="@+id/et_I"
@@ -35,20 +41,17 @@
                 android:ems="10"
                 android:hint="Current in Ampere "
                 android:inputType="numberDecimal|numberSigned"
-                android:textColor="@color/white"
-                android:textColorHint="@color/darkgrey"
-                android:typeface="sans" />
+                app:layout_constraintTop_toBottomOf="@id/title" />
 
             <EditText
                 android:id="@+id/et_R"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:hint="Resistance in Ohms"
+                android:hint="Resistance in Ohms "
                 android:inputType="numberDecimal|numberSigned"
-                android:textColor="@color/white"
-                android:textColorHint="@color/darkgrey"
-                android:typeface="sans" />
+                app:layout_constraintTop_toBottomOf="@id/et_I" />
+
 
             <EditText
                 android:id="@+id/et_V"
@@ -57,64 +60,71 @@
                 android:ems="10"
                 android:hint="Voltage in Volts"
                 android:inputType="numberDecimal|numberSigned"
-                android:textColor="@color/white"
-                android:textColorHint="@color/darkgrey"
-                android:typeface="sans" />
+                app:layout_constraintTop_toBottomOf="@id/et_R" />
+
 
             <Button
                 android:id="@+id/bt_go3"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/roundedbutton"
+                style="@style/solveButton"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
                 android:text="SOLVE"
-                android:textColor="@color/white"
-                android:typeface="sans" />
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/et_V" />
+
 
             <Button
                 android:id="@+id/clr"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/roundedbutton"
+                style="@style/solveButton"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
                 android:text="CLEAR"
-                android:textColor="@color/white"
-                android:typeface="sans" />
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/bt_go3" />
 
             <TextView
                 android:id="@+id/answer01"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
                 android:text=""
-                android:textColor="@color/white"
                 android:textSize="24dp"
-                android:typeface="sans" />
+                app:layout_constraintTop_toBottomOf="@+id/clr" />
 
             <TextView
                 android:id="@+id/answer02"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
                 android:text=""
-                android:textColor="@color/white"
                 android:textSize="24dp"
-                android:typeface="sans" />
+                app:layout_constraintTop_toBottomOf="@+id/answer01" />
 
             <TextView
                 android:id="@+id/answer03"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
                 android:text=""
-                android:textColor="@color/white"
                 android:textSize="24dp"
-                android:typeface="sans" />
+                app:layout_constraintTop_toBottomOf="@+id/answer02" />
 
             <TextView
                 android:id="@+id/answer04"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
                 android:text=""
-                android:textColor="@color/white"
                 android:textSize="24dp"
-                android:typeface="sans" />
+                app:layout_constraintTop_toBottomOf="@+id/answer03" />
 
-        </LinearLayout>
+        </android.support.constraint.ConstraintLayout>
     </ScrollView>
 </android.support.constraint.ConstraintLayout>

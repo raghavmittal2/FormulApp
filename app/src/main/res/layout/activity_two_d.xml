@@ -4,186 +4,121 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/back"
-    tools:context=".Two_d_page">
-
-    <TextView
-        android:id="@+id/Header"
-        android:layout_width="296dp"
-        android:layout_height="55dp"
-        android:layout_marginStart="67dp"
-        android:layout_marginLeft="67dp"
-        android:layout_marginTop="28dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginRight="32dp"
-        android:text="@string/two_d_shapes"
-        android:textColor="@color/white"
-        android:textSize="30sp"
-        android:textStyle="bold"
-        android:typeface="sans"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-
-    <Button
-        android:id="@+id/cir_btn"
-        android:layout_width="296dp"
-        android:layout_height="60dp"
-        android:layout_marginStart="67dp"
-        android:layout_marginLeft="67dp"
-        android:layout_marginTop="64dp"
-        android:background="@drawable/roundedbutton"
-        android:textColor="@color/white"
-        android:text="Circle"
-        android:textSize="18sp"
-        android:typeface="sans"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Header" />
-
-    <Button
-        android:id="@+id/squ_btn"
-        android:layout_width="296dp"
-        android:layout_height="60dp"
-        android:layout_marginStart="67dp"
-        android:layout_marginLeft="67dp"
-        android:layout_marginTop="20dp"
-        android:background="@drawable/roundedbutton"
-        android:textColor="@color/white"
-        android:text="Square"
-        android:textSize="18sp"
-        android:typeface="sans"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cir_btn" />
-
-    <Button
-        android:id="@+id/tri_btn"
-        android:layout_width="296dp"
-        android:layout_height="60dp"
-        android:layout_marginStart="67dp"
-        android:layout_marginLeft="67dp"
-        android:layout_marginTop="20dp"
-        android:background="@drawable/roundedbutton"
-        android:textColor="@color/white"
-        android:text="Triangle"
-        android:textSize="18sp"
-        android:typeface="sans"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/squ_btn" />
-
-    <Button
-        android:id="@+id/rec_btn"
-        android:layout_width="296dp"
-        android:layout_height="60dp"
-        android:layout_marginStart="67dp"
-        android:layout_marginLeft="67dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="48dp"
-        android:layout_marginRight="48dp"
-        android:background="@drawable/roundedbutton"
-        android:textColor="@color/white"
-        android:text="Rectangle"
-        android:textSize="18sp"
-        android:typeface="sans"
+    android:background="@null">
+    <ScrollView
+        android:layout_width="405dp"
+        android:layout_height="match_parent"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:scrollbarStyle="outsideInset"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tri_btn" />
+        app:layout_constraintTop_toTopOf="parent">
 
-    <Button
-        android:id="@+id/rho_btn"
-        android:layout_width="296dp"
-        android:layout_height="60dp"
-        android:layout_marginStart="67dp"
-        android:layout_marginLeft="67dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="48dp"
-        android:layout_marginRight="48dp"
-        android:background="@drawable/roundedbutton"
-        android:textColor="@color/white"
-        android:text="Rhombus"
-        android:textSize="18sp"
-        android:typeface="sans"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/rec_btn" />
 
-    <Button
-        android:id="@+id/tra_btn"
-        android:layout_width="296dp"
-        android:layout_height="60dp"
-        android:layout_marginStart="67dp"
-        android:layout_marginLeft="67dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="48dp"
-        android:layout_marginRight="48dp"
-        android:background="@drawable/roundedbutton"
-        android:textColor="@color/white"
-        android:text="Trapezium"
-        android:textSize="18sp"
-        android:typeface="sans"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/rho_btn" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-    <Button
-        android:id="@+id/pen_btn"
-        android:layout_width="296dp"
-        android:layout_height="60dp"
-        android:layout_marginStart="67dp"
-        android:layout_marginLeft="67dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="48dp"
-        android:layout_marginRight="48dp"
-        android:background="@drawable/roundedbutton"
-        android:textColor="@color/white"
-        android:text="Pentagon"
-        android:textSize="18sp"
-        android:typeface="sans"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tra_btn" />
+            <TextView
+                android:id="@+id/Header"
+                style="@style/FAheaderItalics"
+                android:text="2 D Shapes "
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/hex_btn"
-        android:layout_width="296dp"
-        android:layout_height="60dp"
-        android:layout_marginStart="67dp"
-        android:layout_marginLeft="67dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="48dp"
-        android:layout_marginRight="48dp"
-        android:background="@drawable/roundedbutton"
-        android:textColor="@color/white"
-        android:text="Hexagon"
-        android:textSize="18sp"
-        android:typeface="sans"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/pen_btn" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+                <Button
+                    android:id="@+id/cir_btn"
+                    style="@style/FAtile"
+                    android:background="@color/colorGreenShade"
+                    android:text="Circle"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
 
-    <Button
-        android:id="@+id/oct_btn"
-        android:layout_width="296dp"
-        android:layout_height="60dp"
-        android:layout_marginStart="67dp"
-        android:layout_marginLeft="67dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="48dp"
-        android:layout_marginRight="48dp"
-        android:background="@drawable/roundedbutton"
-        android:textColor="@color/white"
-        android:text="Octagon"
-        android:textSize="18sp"
-        android:typeface="sans"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/hex_btn" />
+                <Button
+                    android:id="@+id/squ_btn"
+                    style="@style/FAtile"
+                    android:background="@color/colorAccent"
+                    android:text="Square"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
 
+                <Button
+                    android:id="@+id/tri_btn"
+                    style="@style/FAtile"
+                    android:text="Triangle"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+                <Button
+                    android:id="@+id/rec_btn"
+                    style="@style/FAtile"
+                    android:background="@color/colorGreenShade"
+                    android:text="Rectangle"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <Button
+                    android:id="@+id/rho_btn"
+                    style="@style/FAtile"
+                    android:background="@color/colorAccent"
+                    android:text="Square"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <Button
+                    android:id="@+id/tra_btn"
+                    style="@style/FAtile"
+                    android:text="Trapezium"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <Button
+                    android:id="@+id/pen_btn"
+                    style="@style/FAtile"
+                    android:background="@drawable/cyan"
+                    android:text="Pentagon"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"/>
+
+                <Button
+                    android:id="@+id/hex_btn"
+                    style="@style/FAtile"
+                    android:background="@color/colorGreen"
+                    android:text="Hexagon"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <Button
+                    android:id="@+id/oct_btn"
+                    style="@style/FAtile"
+                    android:background="@drawable/softblue"
+                    android:text="Octagon"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
 </android.support.constraint.ConstraintLayout>
