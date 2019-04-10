@@ -19,7 +19,7 @@
             android:label="SI Units" />
         <activity
             android:name=".MathsNumericIntegration"
-            android:label="Integeration" />
+            android:label="Integration" />
         <activity
             android:name=".uvast_calc"
             android:label="UVAST Calculator" />
