@@ -59,14 +59,20 @@ public class MathsNumericIntegration extends AppCompatActivity {
                 upperV.setError("You need to enter an upper range value");
             }
             if (emptyVariable){
-                upperV.setError("You need to enter the variable of the function");
+                variableT.setError("You need to enter the variable of the function");
             }
             return;
         }
+        ni_f.setError("");
+        lowerV.setError("");
+        upperV.setError("");
+        variableT.setError("");
         final String variable = variableT.getText().toString();
         final String fct = ni_f.getText().toString();
         TextView errorView = findViewById(R.id.ni_error);
         MathView result = findViewById(R.id.ni_result);
+        errorView.setText("");
+        result.setText("");
         result.config(
                 "MathJax.Hub.Config({\n"+
                         "  { TeX: { extensions: [\"color.js\"] } }\n"+
