@@ -69,7 +69,7 @@ public class Maths_Function extends AppCompatActivity {
         });
     }
 
-
+//display message to give a tips to the user
     protected void displayTips(View view){
         AlertDialog.Builder builder = new AlertDialog.Builder(Maths_Function.this);
         builder.setCancelable(true);
@@ -131,7 +131,8 @@ public class Maths_Function extends AppCompatActivity {
 
 
         });
-
+        editText.setHintTextColor(getResources().getColor(android.R.color.darker_gray));
+        editText.setTextColor(getResources().getColor(android.R.color.white));
 
         editText.setLayoutParams(p);
 

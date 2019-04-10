@@ -115,6 +115,7 @@ public class Maths_Setting_Graph extends AppCompatActivity {
         textView.setText("Function " + numFct + ": " + currentFct);
         parentText = textView;
         textView.setLayoutParams(p);
+        textView.setTextColor(getResources().getColor(android.R.color.white));
         return textView;
 
 
@@ -179,6 +180,9 @@ public class Maths_Setting_Graph extends AppCompatActivity {
 
 
         spin.setLayoutParams(pbis);
+
+        spin.setBackgroundColor(getResources().getColor(android.R.color.white));
+
 
         return spin;
 

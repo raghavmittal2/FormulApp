@@ -31,6 +31,7 @@
                 android:layout_marginTop="20dp"
                 android:textSize="20dp"
                 android:text="Variable"
+
                 />
 
 
@@ -44,6 +45,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:ems="10"
+                android:digits="abcdefghijklmnopqrstuvwxyz"
                 android:hint="Variable you want to use (Eg:x)"
                 android:maxLength="1" />
 
@@ -104,6 +106,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/init_fct"
                 android:layout_marginTop="20dp"
+                android:background="@color/white"
                 android:text=""
 
                 ></io.github.kexanie.library.MathView>
