@@ -78,22 +78,14 @@ public class fragmentHome extends Fragment {
                     startActivity(intent);
                     listView.setVisibility(View.GONE);
                 }if (list.get(position) == "Graphing") {
-                    Intent intent = new Intent(getActivity(), Maths_Setting_Graph.class);
-                    startActivity(intent);
-                    listView.setVisibility(View.GONE);
-                }if (list.get(position) == "Solve Function") {
                     Intent intent = new Intent(getActivity(), Maths_Function.class);
                     startActivity(intent);
                     listView.setVisibility(View.GONE);
                 }if (list.get(position) == "Integrate Functions") {
                     Intent intent = new Intent(getActivity(), MathsNumericIntegration.class);
                     startActivity(intent);
-                    listView.setVisibility(View.GONE);
-                }if (list.get(position) == "Differentiate Functions") {
-                    Intent intent = new Intent(getActivity(), differentiation.class);
-                    startActivity(intent);
-                    listView.setVisibility(View.GONE);
-                }if (list.get(position) == "2-D Shapes") {
+                    listView.setVisibility(View.GONE);}
+               if (list.get(position) == "2-D Shapes") {
                     Intent intent = new Intent(getActivity(), Two_d_page.class);
                     startActivity(intent);
                     listView.setVisibility(View.GONE);
