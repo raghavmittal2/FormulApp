@@ -155,22 +155,6 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/VandA_btn" />
 
-            <Button
-                android:id="@+id/func_btn"
-                android:layout_width="296dp"
-                android:layout_height="60dp"
-                android:layout_marginStart="67dp"
-                android:layout_marginLeft="67dp"
-                android:layout_marginTop="20dp"
-                android:background="@drawable/roundedbutton"
-                android:text="@string/Solve_maths_function"
-                android:textSize="18sp"
-                android:typeface="sans"
-                android:textColor="@color/white"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/graph_btn" />
 
             <Button
                 android:id="@+id/mathsnumericintegeration"

@@ -56,8 +56,7 @@ public class fragmentMaths extends Fragment {
         three_d_btn.getBackground().setAlpha(64);
         logs_btn = (Button) view.findViewById(R.id.log_btn);
         logs_btn.getBackground().setAlpha(64);
-        maths_func_btn = (Button) view.findViewById(R.id.func_btn);
-        maths_func_btn.getBackground().setAlpha(64);
+
 
         Trig_btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -101,12 +100,6 @@ public class fragmentMaths extends Fragment {
             }
         });
 
-        maths_func_btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v){
-                openMathsFunction(v);         //function for opening page
-            }
-        });
 
         differentiate_btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -175,10 +168,7 @@ public class fragmentMaths extends Fragment {
         startActivity(intent);
     }
 
-    public void openMathsFunction(View v) {
-        Intent intent = new Intent(getActivity(), Maths_Function.class);
-        startActivity(intent);
-    }
+
 
     public void openDifferentiatePage(View v) {
         Intent intent = new Intent(getActivity(), differentiation.class);

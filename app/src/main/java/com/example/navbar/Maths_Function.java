@@ -27,7 +27,6 @@ public class Maths_Function extends AppCompatActivity {
     private RelativeLayout mLayout;
     private Button submitButton;
     private Button newFctButton;
-    private ImageButton imageBtn;
     private EditText currentEdit;
     private EditText variable;
     private EditText fct_init;
@@ -86,7 +85,39 @@ public class Maths_Function extends AppCompatActivity {
         builder.show();
     }
 
+    //open guide page
+    protected void goToGuide(View view){
+       final View v = view;
+        AlertDialog.Builder builder = new AlertDialog.Builder(Maths_Function.this);
+        builder.setCancelable(true);
+        builder.setTitle("Tips");
+        builder.setMessage("If you don't know how to enter your function, you can check our guide");
 
+
+        builder.setPositiveButton("ok", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                //After the display of the message, we close the alert box
+               gotoGraphView(v);
+
+            }
+        });
+
+        builder.setNegativeButton("no", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                //we no nothing, it will close the alerbox
+
+
+            }
+        });
+        builder.show();
+    }
+
+protected void gotoGraphView(View v){
+    Intent intent = new Intent(this, Guide_page.class);
+    startActivity(intent);
+}
 
     //Action when we click on the submit button : display the Math View of the fct
     protected void displayCheckView(View view) {
