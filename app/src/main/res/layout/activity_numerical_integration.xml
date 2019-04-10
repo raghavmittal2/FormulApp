@@ -79,7 +79,7 @@
         app:layout_constraintVertical_bias="1.0" />
 
     <TextView
-        android:id="@+id/ni_result"
+        android:id="@+id/ni_error"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -88,13 +88,35 @@
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/ni_upper"
-        android:textColor="@color/white"
+        android:textColor="@color/colorRed"
         android:typeface="sans"
+        app:layout_constraintBottom_toTopOf="@+id/ni_upper"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ni_result"
+        app:layout_constraintVertical_bias="0.022" />
+
+    <io.github.kexanie.library.MathView
+        android:id="@+id/ni_result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@color/colorPrimaryDark"
+        android:text=""
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.792" />
+        app:layout_constraintVertical_bias="0.191">
+    </io.github.kexanie.library.MathView>
 
     <Button
         android:id="@+id/ni_button"
@@ -146,10 +168,8 @@
         android:layout_height="40dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:layout_marginBottom="8dp"
         android:text="@string/ni_text_d"
         android:textColor="@color/colorAccent"
         android:textSize="24sp"
@@ -159,19 +179,15 @@
         app:layout_constraintEnd_toStartOf="@id/ni_variable"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/ni_f"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"
+        app:layout_constraintTop_toTopOf="@+id/ni_f"
         tools:text="@string/ni_text_d" />
 
     <EditText
         android:id="@+id/ni_variable"
         android:layout_width="92dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_height="40dp"
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
-        android:layout_marginBottom="8dp"
-        android:ems="10"
         android:hint="@string/ni_variable_hint"
         android:inputType="text"
         android:textColor="@color/white"
@@ -180,7 +196,6 @@
         android:typeface="sans"
         app:layout_constraintBottom_toBottomOf="@+id/ni_d"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintTop_toTopOf="@+id/ni_d" />
 
 </android.support.constraint.ConstraintLayout>

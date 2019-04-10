@@ -114,10 +114,10 @@ public class Maths_Function extends AppCompatActivity {
         builder.show();
     }
 
-protected void gotoGraphView(View v){
-    Intent intent = new Intent(this, Guide_page.class);
-    startActivity(intent);
-}
+    protected void gotoGraphView(View v){
+        Intent intent = new Intent(this, Guide_page.class);
+        startActivity(intent);
+    }
 
     //Action when we click on the submit button : display the Math View of the fct
     protected void displayCheckView(View view) {

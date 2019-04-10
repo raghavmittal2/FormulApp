@@ -133,7 +133,7 @@
     <string name="three_d_shapes">3-D shapes</string>
     <string name="Solve_maths_function">SOLVE FUNCTION</string>
     <string name="ni_text_d">d</string>
-    <string name="ni_variable_hint">Put in the \n variable \n here</string>
+    <string name="ni_variable_hint">Variable</string>
 
     <string-array name="colors">
         <item>Blue</item>
