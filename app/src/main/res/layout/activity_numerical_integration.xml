@@ -6,7 +6,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorPrimaryDark">
-    <!-- TODO add Mathview for result instead of TextView -->
     <EditText
         android:id="@+id/ni_f"
         android:layout_width="222dp"
@@ -45,7 +44,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/ni_f"
         app:layout_constraintVertical_bias="1.0" />
-    <!-- TODO add edittext for variable name -->
 
     <EditText
         android:id="@+id/ni_lower"
