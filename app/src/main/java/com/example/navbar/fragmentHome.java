@@ -41,15 +41,31 @@ public class fragmentHome extends Fragment {
         list = new ArrayList<String>();
         context = getActivity();
 
-        list.add("page 1");
-        list.add("page 2");
-        list.add("page 3");
-        list.add("page 4");
-        list.add("page 5");
-        list.add("page 6");
-        list.add("page 7");
+        list.add("Trigonometry");
+        list.add("Fundamental Physical Constraints");
+        list.add("Surface Area and Volume");
+        list.add("Solve Quadratic Equation");
+        list.add("Get Area and Volume");
+        list.add("Graphing");
+        list.add("Integrate Functions");
+        list.add("2-D Shapes");
+        list.add("3-D Shapes");
+        list.add("Calculate Log");
+        list.add("Mechanics");
+        list.add("Electricity");
+        list.add("Light/Optics");
+        list.add("UVAST Calculator");
+        list.add("Conservation of Momentum Experiment");
+        list.add("Lens Calculator");
+        list.add("Ohm Calculator");
+        list.add("Calculate Gravity");
+        list.add("Guide");
+        list.add("Base Units");
+        list.add("SI Units");
+        //list.add();
 
-        adapter = new ArrayAdapter<>(context, android.R.layout.simple_list_item_1);
+
+        adapter = new ArrayAdapter<>(context, android.R.layout.simple_list_item_1,list);
         listView.setAdapter(adapter);
 
         listView.setVisibility(View.GONE);
@@ -84,8 +100,8 @@ public class fragmentHome extends Fragment {
                 }if (list.get(position) == "Integrate Functions") {
                     Intent intent = new Intent(getActivity(), MathsNumericIntegration.class);
                     startActivity(intent);
-                    listView.setVisibility(View.GONE);}
-               if (list.get(position) == "2-D Shapes") {
+                    listView.setVisibility(View.GONE);
+                }if (list.get(position) == "2-D Shapes") {
                     Intent intent = new Intent(getActivity(), Two_d_page.class);
                     startActivity(intent);
                     listView.setVisibility(View.GONE);
