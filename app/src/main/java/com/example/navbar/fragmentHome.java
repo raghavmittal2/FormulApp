@@ -73,87 +73,87 @@ public class fragmentHome extends Fragment {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                if (list.get(position) == "Trigonometry") {
+                if ( adapter.getItem(position)== "Trigonometry") {
                     Intent intent = new Intent(getActivity(), Trig_page.class);
                     startActivity(intent);
                     listView.setVisibility(View.GONE);
-                }if (list.get(position) == "Fundamental Physical Constraints") {
+                }if (adapter.getItem(position) == "Fundamental Physical Constraints") {
                     Intent intent = new Intent(getActivity(), Physics_page.class);
                     startActivity(intent);
                     listView.setVisibility(View.GONE);
-                }if (list.get(position) == "Surface Area and Volume") {
+                }if (adapter.getItem(position) == "Surface Area and Volume") {
                     Intent intent = new Intent(getActivity(), Length_Area_page.class);
                     startActivity(intent);
                     listView.setVisibility(View.GONE);
-                }if (list.get(position) == "Solve Quadratic Equation") {
+                }if (adapter.getItem(position) == "Solve Quadratic Equation") {
                     Intent intent = new Intent(getActivity(), quadrix.class);
                     startActivity(intent);
                     listView.setVisibility(View.GONE);
-                }if (list.get(position) == "Get Area and Volume") {
+                }if (adapter.getItem(position) == "Get Area and Volume") {
                     Intent intent = new Intent(getActivity(), Getting_Area_Volume.class);
                     startActivity(intent);
                     listView.setVisibility(View.GONE);
-                }if (list.get(position) == "Graphing") {
+                }if (adapter.getItem(position) == "Graphing") {
                     Intent intent = new Intent(getActivity(), Maths_Function.class);
                     startActivity(intent);
                     listView.setVisibility(View.GONE);
-                }if (list.get(position) == "Integrate Functions") {
+                }if (adapter.getItem(position) == "Integrate Functions") {
                     Intent intent = new Intent(getActivity(), MathsNumericIntegration.class);
                     startActivity(intent);
                     listView.setVisibility(View.GONE);
-                }if (list.get(position) == "2-D Shapes") {
+                }if (adapter.getItem(position) == "2-D Shapes") {
                     Intent intent = new Intent(getActivity(), Two_d_page.class);
                     startActivity(intent);
                     listView.setVisibility(View.GONE);
-                }if (list.get(position) == "3-D Shapes") {
+                }if (adapter.getItem(position) == "3-D Shapes") {
                     Intent intent = new Intent(getActivity(), Three_d_page.class);
                     startActivity(intent);
                     listView.setVisibility(View.GONE);
-                }if (list.get(position) == "Calculate Log") {
+                }if (adapter.getItem(position) == "Calculate Log") {
                     Intent intent = new Intent(getActivity(), Logs_page.class);
                     startActivity(intent);
                     listView.setVisibility(View.GONE);
-                }if (list.get(position) == "Mechanics") {
+                }if (adapter.getItem(position) == "Mechanics") {
                     Intent intent = new Intent(getActivity(), mechanics_page.class);
                     startActivity(intent);
                     listView.setVisibility(View.GONE);
-                }if (list.get(position) == "Electricity") {
+                }if (adapter.getItem(position) == "Electricity") {
                     Intent intent = new Intent(getActivity(), elec_page.class);
                     startActivity(intent);
                     listView.setVisibility(View.GONE);
-                }if (list.get(position) == "Light/Optics ") {
+                }if (adapter.getItem(position) == "Light/Optics ") {
                     Intent intent = new Intent(getActivity(), light_page.class);
                     startActivity(intent);
                     listView.setVisibility(View.GONE);
-                }if (list.get(position) == "UVAST Calculator") {
+                }if (adapter.getItem(position) == "UVAST Calculator") {
                     Intent intent = new Intent(getActivity(), uvast_calc.class);
                     startActivity(intent);
                     listView.setVisibility(View.GONE);
-                }if (list.get(position) == "Conservation of Momentum Experiment") {
+                }if (adapter.getItem(position) == "Conservation of Momentum Experiment") {
                     Intent intent = new Intent(getActivity(), conservation_of_momentum.class);
                     startActivity(intent);
                     listView.setVisibility(View.GONE);
-                }if (list.get(position) == "Lens Calculator") {
+                }if (adapter.getItem(position) == "Lens Calculator") {
                     Intent intent = new Intent(getActivity(), lens_calc.class);
                     startActivity(intent);
                     listView.setVisibility(View.GONE);
-                }if (list.get(position) == "Ohm Calculator") {
+                }if (adapter.getItem(position) == "Ohm Calculator") {
                     Intent intent = new Intent(getActivity(), OhmLawCalc.class);
                     startActivity(intent);
                     listView.setVisibility(View.GONE);
-                }if (list.get(position) == "Calculate Gravity") {
+                }if (adapter.getItem(position)== "Calculate Gravity") {
                     Intent intent = new Intent(getActivity(), gravity_page.class);
                     startActivity(intent);
                     listView.setVisibility(View.GONE);
-                }if (list.get(position) == "Guide") {
+                }if (adapter.getItem(position) == "Guide") {
                     Intent intent = new Intent(getActivity(), Guide_page.class);
                     startActivity(intent);
                     listView.setVisibility(View.GONE);
-                }if (list.get(position) == "Base Units") {
+                }if (adapter.getItem(position) == "Base Units") {
                     Intent intent = new Intent(getActivity(), Base_Units_page.class);
                     startActivity(intent);
                     listView.setVisibility(View.GONE);
-                }if (list.get(position) == "SI Units") {
+                }if (adapter.getItem(position) == "SI Units") {
                     Intent intent = new Intent(getActivity(), SI_Units_page.class);
                     startActivity(intent);
                     listView.setVisibility(View.GONE);
