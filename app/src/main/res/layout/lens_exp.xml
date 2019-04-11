@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    tools:context=".Length_Area_page"
+    android:background="@color/colorPrimaryDark">
+
+    <ScrollView
+        android:layout_width="386dp"
+        android:layout_height="607dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="225dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:scrollbarStyle="outsideInset"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView113"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Apparatus:"
+                android:textColor="@color/colorWhite"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/textView114"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Concave mirror, screen, lamp-box with crosswire."
+                android:textColor="@color/colorWhite"
+                android:textSize="18sp"
+                app:layout_constraintTop_toBottomOf="@+id/textView73" />
+
+            <TextView
+                android:id="@+id/textView115"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Procedure:"
+                android:textColor="@color/colorWhite"
+                android:textSize="30sp"
+                app:layout_constraintTop_toBottomOf="@+id/textView75" />
+
+            <TextView
+                android:id="@+id/textView116"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="1. Place the lamp-box well outside the approximate focal length - see notes."
+                android:textSize="18sp"
+                app:layout_constraintTop_toBottomOf="@+id/textView81" />
+
+            <TextView
+                android:id="@+id/textView117"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="2. Move the screen until a clear inverted image of the crosswire is obtained"
+                android:textColor="@color/colorWhite"
+                android:textSize="18sp"
+                app:layout_constraintTop_toBottomOf="@+id/textView80" />
+
+            <TextView
+                android:id="@+id/textView118"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="3. Measure the distance u from the crosswire to the mirror, using the metre stick."
+                android:textColor="@color/colorWhite"
+                android:textSize="18sp"
+                app:layout_constraintTop_toBottomOf="@+id/textView105" />
+
+            <TextView
+                android:id="@+id/textView119"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="4. Measure the distance v from the screen to the mirror. "
+                android:textColor="@color/colorWhite"
+                android:textSize="18sp"
+                app:layout_constraintTop_toBottomOf="@+id/textView104" />
+
+            <TextView
+                android:id="@+id/textView120"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="5. Calculate the focal length of the mirror "
+                android:textColor="@color/colorWhite"
+                android:textSize="18sp"
+                app:layout_constraintTop_toBottomOf="@+id/textView103" />
+
+            <TextView
+                android:id="@+id/textView121"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="6. Repeat this procedure for different values of u."
+                android:textColor="@color/colorWhite"
+                android:textSize="18sp"
+                app:layout_constraintTop_toBottomOf="@+id/textView82" />
+
+            <TextView
+                android:id="@+id/textView122"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="7. Calculate f each time and then find an average value."
+                android:textColor="@color/colorWhite"
+                android:textSize="18sp"
+                app:layout_constraintTop_toBottomOf="@+id/textView102" />
+
+            <Button
+                android:id="@+id/buttonlc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorAccent"
+                android:text="Calculate"
+                android:textColor="@color/colorWhite"
+                android:textSize="24sp" />
+
+        </LinearLayout>
+    </ScrollView>
+</android.support.constraint.ConstraintLayout>

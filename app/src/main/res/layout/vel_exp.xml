@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    tools:context=".Length_Area_page"
+    android:background="@color/colorPrimaryDark">
+
+    <ScrollView
+        android:layout_width="386dp"
+        android:layout_height="607dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="225dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:scrollbarStyle="outsideInset"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textViewV1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Apparatus:"
+                android:textColor="@color/colorWhite"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/textViewV2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Ticker timer and tape, suitable low-voltage a.c. power supply, trolley, runway, laboratory
+jack or stand."
+                android:textColor="@color/colorWhite"
+                android:textSize="18sp"
+                app:layout_constraintTop_toBottomOf="@+id/textView73" />
+
+            <TextView
+                android:id="@+id/textViewV3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Procedure:"
+                android:textColor="@color/colorWhite"
+                android:textSize="30sp"
+                app:layout_constraintTop_toBottomOf="@+id/textView75" />
+
+            <TextView
+                android:id="@+id/textViewV4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="1. Set up the apparatus."
+                android:textColor="@color/colorWhite"
+                android:textSize="18sp"
+                app:layout_constraintTop_toBottomOf="@+id/textView81" />
+
+            <TextView
+                android:id="@+id/textViewV5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="2. Connect the ticker timer to a low-voltage power supply."
+                android:textColor="@color/colorWhite"
+                android:textSize="18sp"
+                app:layout_constraintTop_toBottomOf="@+id/textView80" />
+
+            <TextView
+                android:id="@+id/textViewV6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="3. Give the trolley a small push to start it moving"
+                android:textColor="@color/colorWhite"
+                android:textSize="18sp"
+                app:layout_constraintTop_toBottomOf="@+id/textView105" />
+
+            <TextView
+                android:id="@+id/textViewV7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="4. Adjust the angle of inclination of the runway until the trolley moves with constant velocity – the spots on the tape are all equidistant.
+"
+                android:textColor="@color/colorWhite"
+                android:textSize="18sp"
+                app:layout_constraintTop_toBottomOf="@+id/textView104" />
+
+            <TextView
+                android:id="@+id/textViewV8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="5. Most ticker timers make 50 spots per second. Therefore the time interval between two adjacent spots is 0.02 s."
+                android:textColor="@color/colorWhite"
+                android:textSize="18sp"
+                app:layout_constraintTop_toBottomOf="@+id/textView103" />
+
+            <TextView
+                android:id="@+id/textViewV9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="6. Measure the length s of ten adjacent spaces."
+                android:textColor="@color/colorWhite"
+                android:textSize="18sp"
+                app:layout_constraintTop_toBottomOf="@+id/textView82" />
+
+            <TextView
+                android:id="@+id/textViewV10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="7. The time t is 10 ´ 0.02 = 0.2 s."
+                android:textColor="@color/colorWhite"
+                android:textSize="18sp"
+                app:layout_constraintTop_toBottomOf="@+id/textView102" />
+
+            <TextView
+                android:id="@+id/textViewV11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="8. Repeat using pushes of varying strengths."
+                android:textColor="@color/colorWhite"
+                android:textSize="18sp"
+                app:layout_constraintTop_toBottomOf="@+id/textView106" />
+
+            <TextView
+                android:id="@+id/textViewV12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="9. Tabulate results. "
+                android:textColor="@color/colorWhite"
+                android:textSize="18sp"
+                app:layout_constraintTop_toBottomOf="@+id/textView107" />
+
+            <Button
+                android:id="@+id/buttonvel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorAccent"
+                android:text="Calculate"
+                android:textColor="@color/colorWhite"
+                android:textSize="24sp" />
+
+        </LinearLayout>
+    </ScrollView>
+</android.support.constraint.ConstraintLayout>

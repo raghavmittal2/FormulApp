@@ -21,6 +21,12 @@
             android:name=".MathsNumericIntegration"
             android:label="Integeration" />
         <activity
+            android:name=".lens_exp"
+            android:label="Lens Experiment" />
+        <activity
+            android:name=".velocity_exp"
+            android:label="Velocity Experiment" />
+        <activity
             android:name=".uvast_calc"
             android:label="UVAST Calculator" />
         <activity
