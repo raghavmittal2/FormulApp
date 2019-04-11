@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
     tools:context=".Length_Area_page">
 
     <ScrollView
@@ -38,9 +39,10 @@
                 android:layout_marginEnd="32dp"
                 android:layout_marginRight="32dp"
                 android:text="Mechanics Formulae"
+                android:textColor="@color/colorAccent"
                 android:textSize="25sp"
                 android:textStyle="bold"
-                android:typeface="serif"
+                android:typeface="sans"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
@@ -51,7 +53,7 @@
                 android:id="@+id/textView67"
                 android:layout_width="414dp"
                 android:layout_height="549dp"
-                android:layout_marginTop="111dp"
+                android:layout_marginTop="45dp"
                 android:layout_marginEnd="38dp"
                 android:layout_marginRight="38dp"
                 android:text="Equations of Motion:\n
@@ -63,9 +65,10 @@ Angular velocity: ω = θ/t \n\n
 Linear velocity and angular velocity: v = rω\n\n
 Centripetal acceleration: a = rω^2 = (v^2)/r\n\n
 Centripetal force: F = mrω^2= m(v^2)/r\n\n
-Newton’s law of gravitation: F = G(m1m2)/d^2\n\n
+Newton’s law of gravitation:F=G(m1m2)/d^2\n\n
 Force and acceleration: F = ma\n\n"
                 android:textSize="20sp"
+                android:textColor="@color/white"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView57" />
 
