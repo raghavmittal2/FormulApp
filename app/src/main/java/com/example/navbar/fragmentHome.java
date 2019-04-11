@@ -168,6 +168,7 @@ public class fragmentHome extends Fragment {
                 listView.setVisibility(View.VISIBLE);
                 if(list.contains(query)) {
                     adapter.getFilter().filter(query);
+                    listView.setVisibility(View.GONE);
                 } else {
                     Toast.makeText(getContext(), "No Match Found!", Toast.LENGTH_LONG).show();
                 }
@@ -176,6 +177,11 @@ public class fragmentHome extends Fragment {
 
             @Override
             public boolean onQueryTextChange(String newText) {
+                if (newText.isEmpty()) {
+                    listView.setVisibility(View.GONE);
+                } else {
+                    listView.setVisibility(View.VISIBLE);
+                }
                 adapter.getFilter().filter(newText);
                 return false;
             }
