@@ -15,6 +15,8 @@ import org.apache.commons.math3.exception.MathIllegalArgumentException;
 import org.apache.commons.math3.exception.TooManyEvaluationsException;
 import org.nfunk.jep.JEP;
 
+import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -36,29 +38,30 @@ public class MathsNumericIntegration extends AppCompatActivity {
         final JEP myParser = new JEP();
         myParser.addStandardFunctions();
         myParser.addStandardConstants();
+        myParser.setImplicitMul(true);
         EditText ni_f = findViewById(R.id.ni_f);
         EditText lowerV = findViewById(R.id.ni_lower);
         EditText upperV = findViewById(R.id.ni_upper);
         EditText variableT = findViewById(R.id.ni_variable);
 
-        boolean emptyF,emptyUpper,emptyLower,emptyVariable,variableRegex;
+        boolean emptyF, emptyUpper, emptyLower, emptyVariable, variableRegex;
         emptyF = TextUtils.isEmpty(ni_f.getText().toString());
         emptyUpper = TextUtils.isEmpty(upperV.getText().toString());
         emptyLower = TextUtils.isEmpty(lowerV.getText().toString());
         emptyVariable = TextUtils.isEmpty(variableT.getText().toString());
 
 
-        if ( emptyF || emptyUpper || emptyLower || emptyVariable){
-            if (emptyF){
+        if (emptyF || emptyUpper || emptyLower || emptyVariable) {
+            if (emptyF) {
                 ni_f.setError("You need to enter a function");
             }
-            if ( emptyLower){
+            if (emptyLower) {
                 lowerV.setError("You need to enter a lower range value");
             }
-            if (emptyUpper){
+            if (emptyUpper) {
                 upperV.setError("You need to enter an upper range value");
             }
-            if (emptyVariable){
+            if (emptyVariable) {
                 variableT.setError("You need to enter the variable of the function");
             }
             return;
@@ -74,16 +77,16 @@ public class MathsNumericIntegration extends AppCompatActivity {
         errorView.setText("");
         result.setText("");
         result.config(
-                "MathJax.Hub.Config({\n"+
-                        "  { TeX: { extensions: [\"color.js\"] } }\n"+
+                "MathJax.Hub.Config({\n" +
+                        "  { TeX: { extensions: [\"color.js\"] } }\n" +
                         "});"
         );
 
         //checking if variable is in the string
-        Pattern variablePattern = Pattern.compile(".*" + variableT.getText().toString()+ ".*");
+        Pattern variablePattern = Pattern.compile(".*" + variableT.getText().toString() + ".*");
         Matcher matcher = variablePattern.matcher(fct);
         variableRegex = matcher.find();
-        if (!variableRegex){
+        if (!variableRegex) {
             String error = "Variable isn't in the function given";
             errorView.setText(error);
             return;
@@ -117,7 +120,7 @@ public class MathsNumericIntegration extends AppCompatActivity {
             try {
                 double eval = solver.integrate(iterations, f, lower, upper);
                 //System.out.println("ESTIMATE: " + eval);
-                String resultString = "$$\\color{white}{\\int_{" + lowerV.getText().toString() + "}^{" + upperV.getText().toString() + "} " + fct +  " d" + variable + " = " + eval +"}$$";
+                String resultString = "$$\\color{white}{\\int_{" + lowerV.getText().toString() + "}^{" + upperV.getText().toString() + "} " + stringToTex(fct) + " d" + variable + " = " + eval + "}$$";
                 result.setText(resultString);
                 converged = true;
             } catch (TooManyEvaluationsException e) {
@@ -137,8 +140,56 @@ public class MathsNumericIntegration extends AppCompatActivity {
                 String error = "The lower bound was higher than the upper bound";
                 errorView.setText(error);
                 break;
+            } catch (IndexOutOfBoundsException e) {
+                String error = " The number of open brackets doesn't match up with the number of closing brackets";
+                errorView.setText(error);
+                break;
             }
         }
+    }
+
+    public String stringToTex(String function) throws IndexOutOfBoundsException {
+        HashSet<Integer> roundOpenBracketsPos = new HashSet<>();
+        HashSet<Integer> roundClosingBracketsPos = new HashSet<>();
+        ArrayList<Integer> OpenBrackets = new ArrayList<>();
+        OpenBrackets.add(0);
+        int placeholder = 0;
+        for (int i = 0; i < function.length(); i++) {
+            Character letter = function.charAt(i);
+            Character prevLetter = i > 0 ? function.charAt(i - 1) : '%';
+            int lastPos = OpenBrackets.size() - 1;
+            Integer currentOpenBrackets = OpenBrackets.get(lastPos);
+
+            if (letter.equals('(') && prevLetter.equals('^')) {
+                roundOpenBracketsPos.add(i);
+                OpenBrackets.add(placeholder);
+            } else if (letter.equals('(')) {
+                placeholder += 1;
+            }
+            if (letter.equals(')')) {
+                if (placeholder > currentOpenBrackets) {
+                    placeholder -= 1;
+                } else {
+                    OpenBrackets.remove(lastPos);
+                    if (OpenBrackets.size() == 0) {
+                        throw new IndexOutOfBoundsException();
+                    }
+                    roundClosingBracketsPos.add(i);
+                }
+            }
+        }
+
+        if (placeholder > 0) {
+            throw new IndexOutOfBoundsException();
+        }
+        char[] fct = function.toCharArray();
+        for (int pos : roundOpenBracketsPos) {
+            fct[pos] = '{';
+        }
+        for (int pos : roundClosingBracketsPos) {
+            fct[pos] = '}';
+        }
+        return new String(fct);
     }
 
 
