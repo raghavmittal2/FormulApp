@@ -9,13 +9,14 @@ import android.widget.TextView;
 
 public class lens_calc extends AppCompatActivity {
     EditText et_u2,et_v2;
-    Button bt_go2,clr;
+    Button bt_go2;
+    Button clr;
     TextView result01;
     TextView result02;
     TextView result03;
 
     double object,image,mag,f,power;
-    //char req;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,10 +25,10 @@ public class lens_calc extends AppCompatActivity {
         et_u2 = (EditText) findViewById(R.id.et_u2);
         et_v2 = (EditText) findViewById(R.id.et_v2);
         bt_go2 = (Button) findViewById(R.id.bt_go2);
+        clr = (Button) findViewById(R.id.clr);
         result01 = (TextView) findViewById(R.id.result01);
         result02 = (TextView) findViewById(R.id.result02);
         result03 = (TextView) findViewById(R.id.result03);
-
 
 
         bt_go2.setOnClickListener(new View.OnClickListener(){
@@ -49,5 +50,17 @@ public class lens_calc extends AppCompatActivity {
 
             }
         });
+
+        clr.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                et_u2.getText().clear();
+                et_v2.getText().clear();
+                result01.setText("");
+                result02.setText("");
+                result03.setText("");
+            }
+        });
+
     }
 }

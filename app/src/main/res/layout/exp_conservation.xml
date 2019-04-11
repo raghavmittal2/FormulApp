@@ -8,15 +8,17 @@
     android:background="@color/colorPrimaryDark">
 
     <ScrollView
-        android:layout_width="wrap_content"
-        android:layout_height="739dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_width="386dp"
+        android:layout_height="607dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="225dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         android:scrollbarStyle="outsideInset"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0">
@@ -28,48 +30,142 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/Header"
-                android:layout_width="wrap_content"
+                android:id="@+id/textView112"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="67dp"
-                android:layout_marginLeft="67dp"
-                android:layout_marginTop="28dp"
-                android:layout_marginEnd="32dp"
-                android:layout_marginRight="32dp"
-                android:text="Verification Of The Principle of Conservation Of Momentum"
-                android:textColor="@color/white"
-                android:textSize="25sp"
-                android:textStyle="bold"
-                android:typeface="sans"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:text="Verification Of The Principle of Conservation Of Momentum" />
-
+                android:text="Apparatus:"
+                android:textColor="@color/colorWhite"
+                android:textSize="30sp" />
 
             <TextView
-                android:id="@+id/Apparatus"
-                android:layout_width="wrap_content"
+                android:id="@+id/textView111"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="45dp"
-                android:text="@string/apparatus_linear_air_track_two_vehicles_with_velcro_pads_attached_blower_two_photogates_two_retort_stands_dual_timer_metre_stick_black_card"
-                android:textColor="@color/white"
-                android:textSize="20sp"
-                android:typeface="sans"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toEndOf="@+id/imageView"
-                app:layout_constraintTop_toBottomOf="@+id/Header" />
+                android:text="Linear air-track, two vehicles with velcro pads attached, blower, two photogates, two retort
+    stands, dual timer, metre-stick, black card."
+                android:textColor="@color/colorWhite"
+                android:textSize="18sp"
+                app:layout_constraintTop_toBottomOf="@+id/textView73" />
 
             <TextView
-                android:id="@+id/Procedure"
-                android:layout_width="wrap_content"
+                android:id="@+id/textView105"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/procedure_1_set_up_apparatus_as_in_the_diagram_n_2_connect_air_track_to_blower_n_3_level_the_air_track_n_4_measure_the_mass_of_each_vehicle_m1_and_m2_respectively_including_attachments_using_a_balance_n_5_measure_the_length_l_of_the_black_card_in_metres_n_6_with_vehicle_2_stationary_give_vehicle_1_a_gentle_push_after_collision_the_two_vehicles_coalesce_and_move_off_together_n_7_read_the_transit_times_t1and_t2_for_the_card_through_the_two_beams_n_8_calculate_the_velocity_before_the_collision_u_l_t_1_n_9_calculate_the_velocity_after_the_collision_v_l_t_2_n_10_calculate_the_momentum_before_the_collision_pbefore_m1u_and_the_momentum_after_the_collision_pafter_m1_m2_v_n_11_repeat_several_times_with_different_velocities_and_different_masses_12_record_results_as_shown"
-                android:textColor="@color/white"
-                android:textSize="20sp"
-                android:typeface="sans" />
+                android:text="Procedure:"
+                android:textColor="@color/colorWhite"
+                android:textSize="30sp"
+                app:layout_constraintTop_toBottomOf="@+id/textView75" />
 
+            <TextView
+                android:id="@+id/textView104"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="1. Set up apparatus."
+                android:textColor="@color/colorWhite"
+                android:textSize="18sp"
+                app:layout_constraintTop_toBottomOf="@+id/textView81" />
+
+            <TextView
+                android:id="@+id/textView103"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="2. Connect air-track to blower."
+                android:textColor="@color/colorWhite"
+                android:textSize="18sp"
+                app:layout_constraintTop_toBottomOf="@+id/textView80" />
+
+            <TextView
+                android:id="@+id/textView102"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="3. Level the air-track."
+                android:textColor="@color/colorWhite"
+                android:textSize="18sp"
+                app:layout_constraintTop_toBottomOf="@+id/textView105" />
+
+            <TextView
+                android:id="@+id/textView82"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="4. Measure the mass of each vehicle m1 and m2 respectively, including attachments,
+    using a balance."
+                android:textColor="@color/colorWhite"
+                android:textSize="18sp"
+                app:layout_constraintTop_toBottomOf="@+id/textView104" />
+
+            <TextView
+                android:id="@+id/textView81"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="5. Measure the length l of the black card in metres."
+                android:textColor="@color/colorWhite"
+                android:textSize="18sp"
+                app:layout_constraintTop_toBottomOf="@+id/textView103" />
+
+            <TextView
+                android:id="@+id/textView80"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="6. With vehicle 2 stationary, give vehicle 1 a gentle push. After collision the two
+    vehicles coalesce and move off together."
+                android:textColor="@color/colorWhite"
+                android:textSize="18sp"
+                app:layout_constraintTop_toBottomOf="@+id/textView82" />
+
+            <TextView
+                android:id="@+id/textView75"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="7. Read the transit times t1and t2 for the card through the two beams."
+                android:textColor="@color/colorWhite"
+                android:textSize="18sp"
+                app:layout_constraintTop_toBottomOf="@+id/textView102" />
+
+            <TextView
+                android:id="@+id/textView74"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="8. Calculate the velocity before the collision."
+                android:textColor="@color/colorWhite"
+                android:textSize="18sp"
+                app:layout_constraintTop_toBottomOf="@+id/textView106" />
+
+            <TextView
+                android:id="@+id/textView72"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="9. Calculate the velocity after the collision."
+                android:textColor="@color/colorWhite"
+                android:textSize="18sp"
+                app:layout_constraintTop_toBottomOf="@+id/textView107" />
+
+            <TextView
+                android:id="@+id/textView71"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="10. Calculate the momentum before the collision, pbefore = m1u and the momentum after
+    the collision, pafter = (m1 + m2) v."
+                android:textColor="@color/colorWhite"
+                android:textSize="18sp"
+                app:layout_constraintTop_toBottomOf="@+id/textView108" />
+
+            <TextView
+                android:id="@+id/textView70"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="11. Repeat several times, with different velocities and different masses."
+                android:textColor="@color/colorWhite"
+                android:textSize="18sp"
+                app:layout_constraintTop_toBottomOf="@+id/textView109" />
+
+            <TextView
+                android:id="@+id/textView73"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="12. Record results."
+                android:textColor="@color/colorWhite"
+                android:textSize="18sp"
+                app:layout_constraintTop_toBottomOf="@+id/textView110" />
 
         </LinearLayout>
     </ScrollView>

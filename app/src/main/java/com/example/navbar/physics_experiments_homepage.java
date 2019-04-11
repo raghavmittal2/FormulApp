@@ -52,10 +52,10 @@ public class physics_experiments_homepage extends AppCompatActivity {
                 intent = new Intent(this,conservation_of_momentum.class);
                 break;
             case 1:
-                intent = new Intent(this,conservation_of_momentum.class);
+                intent = new Intent(this,lens_exp.class);
                 break;
             case 2:
-                intent = new Intent(this,conservation_of_momentum.class);
+                intent = new Intent(this,velocity_exp.class);
                 break;
             default:
                 break;

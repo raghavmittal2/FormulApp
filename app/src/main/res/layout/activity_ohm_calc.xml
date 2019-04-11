@@ -71,7 +71,7 @@
                 android:typeface="sans" />
 
             <Button
-                android:id="@+id/clr"
+                android:id="@+id/clr2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/roundedbutton"

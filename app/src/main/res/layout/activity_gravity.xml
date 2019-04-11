@@ -73,14 +73,14 @@
     <TextView
         android:id="@+id/res"
         android:layout_width="320dp"
-        android:layout_height="200dp"
+        android:layout_height="110dp"
         android:layout_marginStart="67dp"
         android:layout_marginLeft="5dp"
         android:layout_marginTop="28dp"
         android:layout_marginEnd="32dp"
         android:layout_marginRight="32dp"
-        android:textAlignment="center"
         android:text="-"
+        android:textAlignment="center"
         android:textColor="@color/white"
         android:textSize="20dp"
         android:typeface="sans"
@@ -88,5 +88,44 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/bt_go"
         app:layout_constraintTop_toTopOf="@+id/bt_go" />
+
+    <TextView
+        android:id="@+id/res2"
+        android:layout_width="320dp"
+        android:layout_height="71dp"
+        android:layout_marginStart="67dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:text="-"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        android:typeface="sans"
+        app:layout_constraintEnd_toEndOf="@+id/bt_go"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/bt_go"
+        app:layout_constraintTop_toTopOf="@+id/bt_go" />
+
+    <TextView
+        android:id="@+id/res3"
+        android:layout_width="320dp"
+        android:layout_height="76dp"
+        android:layout_marginStart="67dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:text="-"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        android:typeface="sans"
+        app:layout_constraintEnd_toEndOf="@+id/bt_go"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/bt_go"
+        app:layout_constraintTop_toTopOf="@+id/bt_go" />
+
 
 </LinearLayout>
