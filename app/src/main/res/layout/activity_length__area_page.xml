@@ -54,9 +54,9 @@
                 android:layout_marginStart="30dp"
                 android:layout_marginLeft="30dp"
                 android:layout_marginTop="15dp"
-                android:text="Cylinder"
+                android:text="CYLINDER:"
                 android:textColor="@color/white"
-                android:textSize="40sp"
+                android:textSize="25sp"
                 android:typeface="sans"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/Header" />
@@ -81,10 +81,13 @@
                 android:layout_width="250dp"
                 android:layout_height="115dp"
                 android:layout_marginTop="45dp"
+                android:paddingLeft="20dp"
+
                 android:text="Area = 2*pi*r*h
-                               Volume = pi*h*r^2"
+
+Volume = pi*h*r^2"
                 android:textColor="@color/white"
-                android:textSize="30sp"
+                android:textSize="20sp"
                 android:typeface="sans"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
@@ -99,9 +102,9 @@
                 android:layout_marginStart="30dp"
                 android:layout_marginLeft="30dp"
                 android:layout_marginTop="32dp"
-                android:text="Cone"
+                android:text="CONE:"
                 android:textColor="@color/white"
-                android:textSize="40sp"
+                android:textSize="25sp"
                 android:typeface="sans"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/imageView" />
@@ -124,11 +127,14 @@
                 android:layout_height="148dp"
                 android:layout_marginTop="111dp"
                 android:layout_marginEnd="38dp"
+                android:paddingLeft="20dp"
+
                 android:layout_marginRight="38dp"
                 android:text="Area = pi*r*l
-                      Volume = (1/3)*pi*h*r^2"
+
+Volume = (1/3)*pi*h*r^2"
                 android:textColor="@color/white"
-                android:textSize="30sp"
+                android:textSize="20sp"
                 android:typeface="sans"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView57" />
@@ -140,7 +146,7 @@
                 android:layout_marginStart="30dp"
                 android:layout_marginLeft="30dp"
                 android:layout_marginTop="32dp"
-                android:text="Circle"
+                android:text="CIRCLE:"
                 android:textColor="@color/white"
                 android:textSize="40sp"
                 android:typeface="sans"
@@ -165,11 +171,14 @@
                 android:layout_height="226dp"
                 android:layout_marginTop="111dp"
                 android:layout_marginEnd="38dp"
+                android:paddingLeft="20dp"
+
                 android:layout_marginRight="38dp"
                 android:text="Area = 4*pi*r^2
-                      Volume = (4/3)*pi*r^3"
+
+ Volume = (4/3)*pi*r^3"
                 android:textColor="@color/white"
-                android:textSize="30sp"
+                android:textSize="20sp"
                 android:typeface="sans"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView57" />

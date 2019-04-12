@@ -91,6 +91,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="SOLVE"
+        android:layout_marginTop="20dp"
         android:textColor="@color/white"
         android:typeface="sans"
         android:background="@drawable/roundedbutton"/>
@@ -98,6 +99,7 @@
         android:id="@+id/clr"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
         android:text="CLEAR"
         android:background="@drawable/roundedbutton"
         android:textColor="@color/white"
