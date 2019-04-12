@@ -36,7 +36,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="47dp"
                 android:text="Area of 2 D Shapes"
-                android:textColor="@color/colorAccent"
+                android:textColor="@color/white"
                 android:typeface="sans"
                 android:textSize="30sp"
                 android:textStyle="bold"
