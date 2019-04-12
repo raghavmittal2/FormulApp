@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "254115481462",
+    "firebase_url": "https://formulapp-3d5b.firebaseio.com",
+    "project_id": "formulapp-3d5b",
+    "storage_bucket": "formulapp-3d5b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:254115481462:android:ad576dddf24dc6c4",
+        "android_client_info": {
+          "package_name": "com.example.navbar"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "254115481462-uc5465879c671e33t3518pbu1jrbd117.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.navbar",
+            "certificate_hash": "33d6127efa3513d08fe72206cfa8c2c3819cbaa3"
+          }
+        },
+        {
+          "client_id": "254115481462-6897orjbt1f5rea0oksa85j7s8u5ni2a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAbFLEXEo2F9Bo_UpYedeScHuwa6MMwLcg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "254115481462-6897orjbt1f5rea0oksa85j7s8u5ni2a.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

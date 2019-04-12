@@ -134,7 +134,7 @@ public class Maths_Function extends AppCompatActivity {
         editText.setId(i);
         editText.setHint("Enter your function");
 
-        //We need to move the Math view(to display fct) according to the creation of new editText
+        //We need to move the Math view(to display fct) according to the creation of new editTextEmail
         RelativeLayout.LayoutParams mLayout2 = (RelativeLayout.LayoutParams) formula.getLayoutParams();
         mLayout2.addRule(RelativeLayout.BELOW, editText.getId());
 
@@ -154,7 +154,7 @@ public class Maths_Function extends AppCompatActivity {
         editText.setOnClickListener(new View.OnClickListener() {
 
             @Override
-            public void onClick(View v) { // we put a listener to display the editText(fct) chose by the user
+            public void onClick(View v) { // we put a listener to display the editTextEmail(fct) chose by the user
                 // TODO Auto-generated method stub
                 formula.setText("$$" + editText.getText().toString() + "$$");
                 fct = editText.getText().toString();
@@ -184,7 +184,7 @@ public class Maths_Function extends AppCompatActivity {
         for (int j = 0; j < i; j++) { //Browsing of the sons
             View child = editTextsContainer.getChildAt(j); // We gather all the child of the view
 
-            // if its an editText, we collect his content and add it into the array
+            // if its an editTextEmail, we collect his content and add it into the array
             //we dont collect the first Edit Text which is the choice of the variable
 
             if (child instanceof EditText && child.getId() != variable.getId()) {
@@ -237,7 +237,7 @@ public class Maths_Function extends AppCompatActivity {
         int i = editTextsContainer.getChildCount();
         for (int j = 0; j < i; j++) { // Parcours des fils
             View child = editTextsContainer.getChildAt(j); // We gather all the child of the view
-            // if its an editText, we test if the fucntion is ok : user use the variable he defined earlier
+            // if its an editTextEmail, we test if the fucntion is ok : user use the variable he defined earlier
 
 
             if (child instanceof EditText && child.getId() != variable.getId()) { // we dont check the edit text which contains the variable

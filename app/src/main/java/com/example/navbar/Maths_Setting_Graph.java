@@ -75,7 +75,7 @@ public class Maths_Setting_Graph extends AppCompatActivity {
                     mLayout.addView(createNewTextView(i, fctList[i]));
                 }
 
-                mLayout.addView(createNewSpinner(i)); // we create a new spinner for each editText, for the choice of the color
+                mLayout.addView(createNewSpinner(i)); // we create a new spinner for each editTextEmail, for the choice of the color
 
 
             }

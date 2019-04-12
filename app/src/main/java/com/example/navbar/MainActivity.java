@@ -40,10 +40,10 @@ public class MainActivity extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
 
 
-        if(savedInstanceState == null){
-        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                new fragmentHome()).commit();
-        navigationView.setCheckedItem(R.id.nav_activity_home);}
+        if(savedInstanceState == null) {
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new fragmentHome()).commit();
+            navigationView.setCheckedItem(R.id.nav_activity_home);
+        }
 
     }
 
